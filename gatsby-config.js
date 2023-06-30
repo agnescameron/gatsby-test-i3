@@ -6,12 +6,22 @@ module.exports = {
     title: `gatsby-test-i3`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    "gatsby-plugin-mdx", 
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "index",
+        "path": "./src/index/_datasets"
+      },
+      __key: "index"
     },
-    __key: "pages"
-  }]
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`remark-frontmatter`]
+    }
+  },
+  `gatsby-plugin-slug`,
+  ]
 };

@@ -1,0 +1,192 @@
+---
+layout: default
+bigquery: https://console.cloud.google.com/bigquery?p=covid-19-dimensions-ai&page=table&d=data&t=publications
+contributors: Digital Science, https://www.digital-science.com/
+cost: Free for personal, non-commercial use.
+description: Dimensions contains more than 100 million publications, ranging from
+  articles published in scholarly journals, books and book chapters, to preprints
+  and conference proceedings. All publications are contextualized with linked data
+  sets, funding, publications, patents, clinical trials, and policy documents. You
+  can also view associated categories, funders, institutions, and researcher profiles.
+documentation: https://docs.dimensions.ai/bigquery/index.html
+last_edit: Wed, 06 Jul 2022 10:14:37 GMT
+location: https://www.dimensions.ai/products/free/
+maintained_by: Digital Science, https://www.digital-science.com/
+schema_fields:
+- family_id
+- publisher
+- research_orgs
+- start_date
+- granted_date
+- expiration_date
+- publication_year
+- assignee_countries
+- book_series_title
+- authors
+- journal_lists
+- funding_eur
+- category_uoa
+- linkout
+- associated_publication_doi
+- current_assignee
+- license
+- links
+- category_hrcs_rac
+- repository_id
+- issue
+- funding_aud
+- funding_details
+- gender
+- cpc
+- funding_currency
+- labels
+- type
+- conference
+- doi
+- established
+- family_members_ids
+- funding_amount
+- funder_countries
+- repository_url
+- priority_date
+- source_id
+- original_assignee_orgs
+- acknowledgements
+- publication_ids
+- start_year
+- funding_nzd
+- id
+- embargo_date
+- parent_id
+- granted_year
+- original_assignee
+- investigators
+- wikipedia_url
+- external_ids
+- research_org_state_codes
+- associated_publication_arxiv_id
+- grant_number
+- resulting_publication_ids
+- associated_publication_pmid
+- eisbn
+- category_rcdc
+- year
+- volume
+- date_inserted
+- category_icrp_cso
+- end_year
+- types
+- research_org_state_names
+- funder_org_state_codes
+- email_address
+- brief_title
+- filing_date
+- open_access_categories
+- abstract
+- research_org_city_names
+- priority_year
+- current_assignee_countries
+- funding_chf
+- reference_ids
+- journal
+- category_bra
+- end_date
+- altmetrics
+- date_modified
+- subtitles
+- mesh_headings
+- category_sdg
+- publication_date
+- organisation_details
+- jurisdiction
+- date
+- acronym
+- date_imported_gbq
+- pmid
+- legal_status
+- funder_org
+- date_online
+- pages
+- category_icrp_ct
+- registry
+- funding_usd
+- open_access_categories_v2
+- isbn
+- foa_number
+- researcher_ids
+- category_for
+- citation_string
+- resulting_publication_doi
+- inventor_names
+- aliases
+- expiration_year
+- research_org_countries
+- metrics
+- associated_grant_ids
+- supporting_grant_ids
+- interventions
+- funder_org_cities
+- funder_orgs
+- clinical_trial_ids
+- repository_name
+- citations
+- original_title
+- original_abstract
+- funder_org_acronyms
+- citations_count
+- associated_publication_id
+- acronyms
+- category_hrcs_hc
+- research_org_cities
+- legal_events
+- assignee_orgs
+- date_print
+- research_org_country_names
+- address
+- funding_jpy
+- funding_cad
+- conditions
+- funding_gbp
+- name
+- concepts
+- current_assignee_orgs
+- editors
+- language
+- description
+- status
+- original_assignee_countries
+- categories
+- active_years
+- funder_org_countries
+- relationships
+- category_hra
+- pmcid
+- application_number
+- patent_ids
+- phase
+- created_date
+- ipcr
+- family_count
+- arxiv_id
+- funding_cny
+- book_title
+- filing_year
+- title
+- filing_status
+- proceedings_title
+- date_normal
+- cited_by_ids
+- mesh_terms
+- kind
+slug: /dimensions
+tags:
+- scholarly literature
+- patents
+- funding
+- clinical trials
+- academic profiles
+terms_of_use: 'Use of both the Dimensions COVID-19 dataset and full Dimensions dataset
+  are subject to the Dimensions Terms of use: https://www.dimensions.ai/policies-terms-legal '
+title: Dimensions
+uuid: dcff88bd-fe6b-4fdb-8159-809bf9d7bc1c
+---
