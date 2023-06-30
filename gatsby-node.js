@@ -25,12 +25,9 @@ exports.createPages = async ({ graphql, actions }) => {
 	  datasets: allMarkdownRemark {
 	    nodes {
 	    	html
+	    	id
 	      frontmatter {
-	        title
-	        slug
-	      	tags
-	      	authors
-	      	location
+	      	slug
 	      }
 	    }
 	}
@@ -43,7 +40,10 @@ exports.createPages = async ({ graphql, actions }) => {
   data.datasets.nodes.forEach((dataset, index) => {
     createPage({
       path: dataset.frontmatter.slug,
-      component: require.resolve(`./src/templates/post.js`)
+      component: require.resolve(`./src/templates/post.js`),
+      context: {
+      	id: dataset.id
+    	}
     })
   })
 }
