@@ -18,9 +18,6 @@ module.exports = {
     },
   {
     resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [`remark-frontmatter`]
-    }
   },
   `gatsby-plugin-slug`,
   ]
