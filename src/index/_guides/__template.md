@@ -7,6 +7,7 @@ tags:
   - tag1
   - tag2
 description: describe contents and source of collection
+slug: template
 ---
 
 Collections are a way to list resources around a theme, relevant to a research agenda or set of papers, or as an introduction to various aspects of the field. They are formatted in markdown:

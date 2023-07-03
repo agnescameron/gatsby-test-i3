@@ -8,6 +8,7 @@ description: Starting point list of datasets and resources for the study of inno
   tools.
 tags: patents
 title: Essential Patent Analysis Datasets
+slug: intro
 uuid: 4f841bda-4401-4cfd-ab89-403d577099f4
 ---
 

@@ -11,10 +11,26 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "index",
+        "name": "datasets",
         "path": "./src/index/_datasets"
       },
-      __key: "index"
+      __key: "datasets"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "tools",
+        "path": "./src/index/_tools"
+      },
+      __key: "tools"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "guides",
+        "path": "./src/index/_guides"
+      },
+      __key: "guides"
     },
   {
     resolve: `gatsby-transformer-remark`,
