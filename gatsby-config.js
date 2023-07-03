@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `gatsby-test-i3`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://iiindex.org`
   },
   plugins: [
     "gatsby-plugin-mdx", 
@@ -28,7 +28,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "guides",
-        "path": "./src/index/_guides"
+        "path": "./src/index/_guides",
+        "ignore": [`**/__*`] 
       },
       __key: "guides"
     },
