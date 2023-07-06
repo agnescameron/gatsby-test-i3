@@ -12,7 +12,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "datasets",
-        "path": "./src/index/_datasets"
+        "path": "./src/index/_datasets",
+        "ignore": [`**/__*`]
       },
       __key: "datasets"
     },
@@ -20,7 +21,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "tools",
-        "path": "./src/index/_tools"
+        "path": "./src/index/_tools",
+        "ignore": [`**/__*`]
       },
       __key: "tools"
     },

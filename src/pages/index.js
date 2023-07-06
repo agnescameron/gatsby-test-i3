@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby"
 import * as React from 'react'
+import SearchForm from "./search-form";
 
 const IndexPage = () => {
 
@@ -11,6 +12,7 @@ const IndexPage = () => {
        <li><Link to="/tools/">Tools</Link></li>
        <li><Link to="/guides/">Guides</Link></li>
      </ul>
+     <SearchForm />
     </main>
   )
 }
