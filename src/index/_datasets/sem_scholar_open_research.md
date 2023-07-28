@@ -10,7 +10,7 @@ last_edit: Thu, 27 Jan 2022 16:31:50 GMT
 location: https://api.semanticscholar.org/corpus
 maintained_by: Semantic Scholar, feedback@semanticscholar.org
 record_creation_timestamp: 12/7/2020 17:20:46
-slug: /sem_scholar_open_research
+slug: sem_scholar_open_research
 tags:
 - citation
 - scholarly literature

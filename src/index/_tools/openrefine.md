@@ -12,7 +12,7 @@ description: OpenRefine is a desktop application that uses your web browser as a
 documentation: https://openrefine.org/documentation.html
 location: https://openrefine.org/
 related_projects: {}
-slug: /openrefine
+slug: openrefine
 tags:
 - data cleaning
 title: OpenRefine

@@ -47,7 +47,7 @@ schema_fields:
 - sizeCache
 - parents
 - dateRevised
-slug: /cooperative_patent_classification
+slug: cooperative_patent_classification
 tags:
 - patents
 - science

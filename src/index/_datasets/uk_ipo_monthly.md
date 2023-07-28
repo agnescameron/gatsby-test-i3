@@ -8,7 +8,7 @@ last_edit: Sun, 05 Feb 2023 00:21:51 GMT
 location: https://www.gov.uk/government/collections/patents-trade-marks-and-designs-monthly-statistics
 maintained_by: UK Intellectual Property Office, https://www.gov.uk/government/organisations/intellectual-property-office
 record_creation_timestamp: 09/02/2021, 10:13:39
-slug: /uk_ipo_monthly
+slug: uk_ipo_monthly
 tags:
 - Trademarks
 - United Kingdom

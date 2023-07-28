@@ -11,7 +11,7 @@ description: We demonstrate a machine learning (ML) based approach to estimating
 documentation: https://cloud.google.com/blog/products/ai-machine-learning/measuring-patent-claim-breadth-using-google-patents-public-datasets
 location: https://github.com/google/patents-public-data/blob/master/models/claim_breadth/README.md
 related_projects: {}
-slug: /claim_breadth_model
+slug: claim_breadth_model
 tags:
 - machine learning
 terms_of_use: http://www.apache.org/licenses/LICENSE-2.0

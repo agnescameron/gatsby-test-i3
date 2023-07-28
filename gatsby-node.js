@@ -84,8 +84,9 @@ const createIndex = async (dataNodes, type, cache) => {
   const store = {}
   // Iterate over all posts 
   for (const node of dataNodes.entries) {
- 
+    console.log('node fields', node.fields)
     const {slug} = node.fields
+    console.log('slug is', slug)
     const title = node.frontmatter.title
     let html = await Promise.all([
       type.getFields().html.resolve(node),

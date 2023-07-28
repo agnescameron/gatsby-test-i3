@@ -20,7 +20,7 @@ last_edit: Mon, 21 Feb 2022 16:25:58 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZULMOY
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 08/17/2021, 08:40:25
-slug: /classifying_patents_semantic_content
+slug: classifying_patents_semantic_content
 tags:
 - United States
 - patents

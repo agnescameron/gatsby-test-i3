@@ -20,7 +20,7 @@ last_edit: Thu, 02 Mar 2023 20:06:27 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/BPC15W
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 08/24/2021, 15:31:52
-slug: /histpat
+slug: histpat
 tags:
 - Historical Patents
 - Technological Change

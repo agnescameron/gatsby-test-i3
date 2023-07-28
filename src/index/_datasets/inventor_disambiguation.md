@@ -7,7 +7,7 @@ citation: Ronald Lai; Alexander D'Amour; Amy Yu; Ye Sun; Lee Fleming, 2011, "Dis
 cost: None
 description: ''
 location: https://dataverse.harvard.edu/dataverse/patent
-slug: /inventor_disambiguation
+slug: inventor_disambiguation
 tags: '[Disambiguation]'
 timeframe: 1975-2010
 title: Inventor disambiguation

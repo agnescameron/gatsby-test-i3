@@ -7,7 +7,7 @@ description: 'CMS periodically produces SSA to FIPS CBSA to county crosswalk fil
   codes. Jean Roth processed the data files below for greater ease of use. '
 last_edit: Fri, 21 Apr 2023 15:35:35 GMT
 location: https://data.nber.org/data/cbsa-msa-fips-ssa-county-crosswalk.html
-slug: /cms_ssa_fips_county_crosswalk
+slug: cms_ssa_fips_county_crosswalk
 tags:
 - geography
 - crosswalk

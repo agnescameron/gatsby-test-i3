@@ -19,7 +19,7 @@ description: 'Improving access to data sets related to transportation economics 
 last_edit: Sat, 30 Jul 2022 16:44:52 GMT
 location: https://www.nber.org/research/data/transportation-economics-21st-century-data-resources
 maintained_by: Caitlin Gorback, gorback@nber.org
-slug: /transportation_economics
+slug: transportation_economics
 tags:
 - geography
 - transportation

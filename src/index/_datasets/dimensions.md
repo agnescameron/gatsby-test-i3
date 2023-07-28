@@ -178,7 +178,7 @@ schema_fields:
 - cited_by_ids
 - mesh_terms
 - kind
-slug: /dimensions
+slug: dimensions
 tags:
 - scholarly literature
 - patents

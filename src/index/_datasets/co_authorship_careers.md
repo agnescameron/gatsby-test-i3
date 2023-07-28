@@ -16,7 +16,7 @@ last_edit: Mon, 06 Dec 2021 17:59:50 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YJUNUN
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 11/21/2020 17:20:46
-slug: /co_authorship_careers
+slug: co_authorship_careers
 tags:
 - coauthor network
 - United States

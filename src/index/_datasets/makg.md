@@ -17,7 +17,7 @@ description: A large RDF data set with over eight billion triples with informati
 last_edit: Wed, 01 Dec 2021 19:36:10 GMT
 location: http://ma-graph.org/
 record_creation_timestamp: 12/3/2020 17:20:46
-slug: /makg
+slug: makg
 tags:
 - citation
 - scholarly literature

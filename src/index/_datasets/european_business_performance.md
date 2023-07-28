@@ -13,7 +13,7 @@ location: https://www.icrios.unibocconi.eu/wps/wcm/connect/Cdr/Icrios/Home/Resou
 maintained_by: crios@unibocconi.it
 record_creation_timestamp: 10/21 13:35
 related_publications: https://global.oup.com/academic/product/the-performance-of-european-business-in-the-twentieth-century-9780198749776?cc=it&lang=en&
-slug: /european_business_performance
+slug: european_business_performance
 tags:
 - Europe
 - GDP

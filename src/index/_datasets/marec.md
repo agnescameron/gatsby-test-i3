@@ -18,7 +18,7 @@ schema_fields:
 - publication_number_original
 - xml
 - truncated
-slug: /marec
+slug: marec
 tags:
 - global
 - patents

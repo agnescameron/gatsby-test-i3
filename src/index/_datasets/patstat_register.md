@@ -15,7 +15,7 @@ last_edit: Wed, 01 Dec 2021 15:19:19 GMT
 location: https://www.epo.org/searching-for-patents/business/patstat.html
 maintained_by: EPO
 record_creation_timestamp: 10/04/2021
-slug: /patstat_register
+slug: patstat_register
 superseded_by: Wed, 01 Dec 2021 19:25:00 GMT
 tags:
 - Europe

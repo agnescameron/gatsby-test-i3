@@ -14,7 +14,7 @@ last_edit: Sat, 30 Jul 2022 10:40:30 GMT
 location: https://www.rug.nl/ggdc/productivity/pwt/?lang=en
 maintained_by: Contact pwt@rug.nl
 record_creation_timestamp: 11/22/2020 17:20:46
-slug: /pwt
+slug: pwt
 tags:
 - geograpy
 - GDP

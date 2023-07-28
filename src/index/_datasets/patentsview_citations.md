@@ -8,7 +8,7 @@ last_edit: Wed, 05 Apr 2023 15:39:07 GMT
 location: https://patentsview.org/download/data-download-tables
 maintained_by: USPTO
 record_creation_timestamp: 10/26/2021
-slug: /patentsview_citations
+slug: patentsview_citations
 tags:
 - United States
 - citation

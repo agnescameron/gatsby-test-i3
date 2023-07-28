@@ -21,7 +21,7 @@ doi: https://doi.org/10.5281/zenodo.4320782
 last_edit: Wed, 05 Apr 2023 21:08:05 GMT
 location: https://doi.org/10.5281/zenodo.3594642
 maintained_by: Lia Sheer
-slug: /discern
+slug: discern
 tags:
 - Compustat
 - Patents

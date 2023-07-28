@@ -13,7 +13,7 @@ last_edit: Sat, 30 Jul 2022 13:50:32 GMT
 location: http://www.gder.info/download_wwc_excel.html
 maintained_by: Gaétan de Rassenfosse
 record_creation_timestamp: 11/23/2020 17:20:46
-slug: /priority_patents
+slug: priority_patents
 tags:
 - priority patents
 - location of inventors

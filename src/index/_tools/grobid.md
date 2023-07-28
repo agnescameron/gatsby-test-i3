@@ -22,7 +22,7 @@ documentation: https://grobid.readthedocs.io/en/latest/Introduction/
 last_edit: 12/03/2021, 19:20:52
 location: https://github.com/kermitt2/grobid
 related_projects: {}
-slug: /grobid
+slug: grobid
 terms_of_use: GROBID is distributed under Apache 2.0 license.
 title: Grobid
 uuid: c6b61a07-2fd6-426d-99e6-2b825b98d102

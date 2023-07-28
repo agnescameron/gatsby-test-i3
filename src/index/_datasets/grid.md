@@ -18,7 +18,7 @@ last_edit: 04/13/2022, 15:00:02
 location: https://www.grid.ac/
 maintained_by: contact@grid.ac, Digital Science
 
-slug: /grid
+slug: grid
 tags:
 - disambiguation
 - geography

@@ -17,7 +17,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 08/17/2021, 11:16:07
 record_superceded_by: Tue, 01 Mar 2022 12:17:46 GMT
-slug: /sipo_matching
+slug: sipo_matching
 superseded_by: 2a0949bb-2f36-45a7-b4cf-109456cec21d
 tags:
 - China

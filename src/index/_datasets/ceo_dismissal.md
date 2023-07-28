@@ -22,7 +22,7 @@ record_creation_timestamp: 09/02/2021, 11:24:03
 related_datasets: Execucomp, https://libguides.uml.edu/wrds/ExecuComp
 related_publications: ' https://onlinelibrary.wiley.com/doi/abs/10.1002/smj.3278'
 relationship_description: Execucomp, https://libguides.uml.edu/wrds/ExecuComp
-slug: /ceo_dismissal
+slug: ceo_dismissal
 tags:
 - CEO
 - Dismissal Management

@@ -32,7 +32,7 @@ schema_fields:
 - x_relative_max
 - y_relative_max
 - class_international
-slug: /google_patents_research
+slug: google_patents_research
 tags:
 - terms
 - citation

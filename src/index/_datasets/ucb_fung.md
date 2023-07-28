@@ -60,7 +60,7 @@ schema_fields:
 - Sequence
 - State
 - CountryCodeOrNPL_cited
-slug: /ucb_fung
+slug: ucb_fung
 tags:
 - patents
 - machine learning

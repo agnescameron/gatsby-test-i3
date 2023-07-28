@@ -19,7 +19,7 @@ error_metrics: 'No'
 last_edit: Sat, 30 Jul 2022 10:39:30 GMT
 location: https://doi.org/10.4119/unibi/2950291
 record_creation_timestamp: 6/13/2021 20:55:50
-slug: /low_carbon_knowledge
+slug: low_carbon_knowledge
 tags:
 - citation
 - scholarly literature

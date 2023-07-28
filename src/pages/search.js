@@ -1,17 +1,29 @@
 /* src/pages/search.js */
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
 // import SearchForm from "./search-form"
 
 // We can access the results of the page GraphQL query via the data props
-const SearchPage = ({ data, location }) => {
+const SearchPage = ({ location }) => {
   
   // We can read what follows the ?q= here
   // URLSearchParams provides a native way to get URL params
   // location.search.slice(1) gets rid of the "?" 
   const params = new URLSearchParams(location.search.slice(1))
   const q = params.get("q") || ""
+
+  const data = useStaticQuery( graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      LunrIndex
+    }
+`)
+  
 
   // LunrIndex is available via page query
   const { store } = data.LunrIndex
@@ -35,14 +47,5 @@ const SearchPage = ({ data, location }) => {
     <p>searchpage</p>
   )
 }
+
 export default SearchPage
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    LunrIndex
-  }
-`

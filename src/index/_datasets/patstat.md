@@ -11,7 +11,7 @@ last_edit: Thu, 24 Nov 2022 06:26:46 GMT
 location: https://www.epo.org/searching-for-patents/business/patstat.html#tab3
 maintained_by: European Patent Office
 record_creation_timestamp: 11/27/2020 17:20:46
-slug: /patstat
+slug: patstat
 tags:
 - Europe
 - patents

@@ -7,7 +7,7 @@ last_edit: Tue, 07 Jun 2022 10:04:37 GMT
 location: http://www.cepii.fr/CEPII/en/bdd_modele/presentation.asp?id=37
 maintained_by: Pierre Cotterlaz, baci@cepii.fr
 record_creation_timestamp: 08/24/2021, 15:32:40
-slug: /baci
+slug: baci
 tags:
 - trade
 - global

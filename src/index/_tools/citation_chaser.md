@@ -14,7 +14,7 @@ description: 'In systematic reviews, we often want to obtain lists of references
 last_edit: Wed, 01 Dec 2021 19:24:38 GMT
 location: https://github.com/nealhaddaway/citationchaser
 related_projects: {}
-slug: /citation_chaser
+slug: citation_chaser
 tags:
 - citation
 - reviews

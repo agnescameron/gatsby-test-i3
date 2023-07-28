@@ -1,6 +1,6 @@
 /* src/components/search-form.js */
 import React, { useState, useRef } from "react"
-import { navigate } from "@reach/router"
+import { navigate } from "gatsby"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
 
@@ -65,7 +65,8 @@ const SearchForm = ({ initialQuery = "" }) => {
     e.preventDefault()
     // `inputEl.current` points to the mounted search input element
     const q = inputEl.current.value
-    navigate(`/search?q=${q}`)
+    results.length > 0 && console.log(results[0])
+    results.length > 0 && navigate(results[0].slug + '/')
   }
   return (
     <div>

@@ -18,7 +18,7 @@ last_edit: Mon, 06 Jun 2022 00:51:12 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YRLSKU
 maintained_by: Mary Kaltenberg
 record_creation_timestamp: 08/12/2021, 15:17:03
-slug: /matched_inventor_ages
+slug: matched_inventor_ages
 tags:
 - Inventors
 - Ages

@@ -40,7 +40,7 @@ schema_fields:
 - publication_date
 - field
 - field_frequency
-slug: /surechembl
+slug: surechembl
 tags:
 - biotechnology
 - health

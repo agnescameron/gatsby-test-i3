@@ -16,7 +16,7 @@ last_edit: Thu, 02 Dec 2021 11:54:52 GMT
 location: https://academic.microsoft.com/home
 maintained_by: Currently in transition
 record_creation_timestamp: 11/29/2020 17:20:46
-slug: /mag
+slug: mag
 tags:
 - citation
 - scholarly literature

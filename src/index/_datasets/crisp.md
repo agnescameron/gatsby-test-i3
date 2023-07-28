@@ -8,7 +8,7 @@ description: The NIH CRISP (Computer Retrieval of Information on Scientific Proj
 last_edit: Fri, 03 Dec 2021 15:37:49 GMT
 location: https://www.nber.org/research/data/computer-retrieval-information-scientific-projects
 maintained_by: data@nber.org
-slug: /crisp
+slug: crisp
 timeframe: 1972-1995
 title: Computer Retrieval of Information on Scientific Projects
 uuid: 0ab62e80-2e3a-4289-8abf-0995489f5f0c

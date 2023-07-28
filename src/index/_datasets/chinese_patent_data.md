@@ -14,7 +14,7 @@ maintained_by: Zi-lin He, Z.L.He@uvt.nl; Tony W. Tong, tony.tong@colorado.edu; Y
   Zhang, yzhang54@tulane.edu
 record_creation_timestamp: 11/14/2020 17:20:46
 record_superceded_by: sipo_matching
-slug: /chinese_patent_data
+slug: chinese_patent_data
 tags:
 - disambiguation
 - China

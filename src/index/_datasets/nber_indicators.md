@@ -8,7 +8,7 @@ description: Regularly-updated and archived index of economic indicators, includ
 last_edit: Wed, 05 Apr 2023 15:40:00 GMT
 location: https://back.nber.org/releases/
 maintained_by: NBER
-slug: /nber_indicators
+slug: nber_indicators
 tags:
 - metrics
 - economy

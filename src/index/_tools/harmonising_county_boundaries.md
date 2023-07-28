@@ -12,7 +12,7 @@ description: This tool creates the csv tables that allow county boundaries to be
 last_edit: Thu, 02 Dec 2021 13:37:42 GMT
 location: https://elisabethperlman.net/code.html
 related_projects: {}
-slug: /harmonising_county_boundaries
+slug: harmonising_county_boundaries
 tags:
 - geography
 title: Tools for Harmonizing County Boundaries

@@ -92,7 +92,7 @@ schema_fields:
 - aia_first_to_file
 - abandon_date
 - wipo_pub_number
-slug: /patex
+slug: patex
 tags:
 - patents
 - legal

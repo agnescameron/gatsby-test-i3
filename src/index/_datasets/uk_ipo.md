@@ -9,7 +9,7 @@ last_edit: Mon, 18 Apr 2022 17:49:18 GMT
 location: https://www.gov.uk/government/publications/ipo-patent-data
 maintained_by: UK Intellectual Property Office, https://www.gov.uk/government/organisations/intellectual-property-office
 record_creation_timestamp: 09/02/2021, 09:58:24
-slug: /uk_ipo
+slug: uk_ipo
 tags:
 - United Kingdom
 - patents

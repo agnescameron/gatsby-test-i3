@@ -19,7 +19,7 @@ schema_fields:
 - indicator_value
 - country_code
 - indicator_name
-slug: /world_bank_development_indicators
+slug: world_bank_development_indicators
 tags:
 - development
 - growth

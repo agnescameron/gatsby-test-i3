@@ -21,7 +21,7 @@ last_edit: Sat, 05 Mar 2022 18:46:31 GMT
 location: https://www.icrios.unibocconi.eu/wps/wcm/connect/Cdr/Icrios/Home/Resources/Databases/PATENTS-ICRIOS+database/
 maintained_by: crios@unibocconi.it
 record_creation_timestamp: 11/30/2020 17:20:46
-slug: /crios_patstat
+slug: crios_patstat
 tags:
 - disambiguation
 - Europe

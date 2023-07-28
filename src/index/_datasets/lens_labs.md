@@ -6,7 +6,7 @@ last_edit: Sat, 03 Dec 2022 01:01:34 GMT
 location: https://www.lens.org/lens/labs/datafacilities
 maintained_by: Lens.org (Cambia)
 record_creation_timestamp: 11/28/2020
-slug: /lens_labs
+slug: lens_labs
 tags:
 - Global
 - citation

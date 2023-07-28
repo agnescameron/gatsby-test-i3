@@ -15,7 +15,7 @@ last_edit: Tue, 26 Apr 2022 18:17:17 GMT
 location: https://patents.darden.virginia.edu/
 maintained_by: GCPD@darden.virginia.edu
 record_creation_timestamp: 11/13/2020 17:47:00
-slug: /uva_global_corporate_patents
+slug: uva_global_corporate_patents
 tags:
 - United States
 - disambiguation

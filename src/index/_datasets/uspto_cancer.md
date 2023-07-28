@@ -18,7 +18,7 @@ last_edit: 04/13/2022, 15:00:02
 location: https://www.uspto.gov/ip-policy/economic-research/research-datasets/cancer-moonshot-patent-data
 maintained_by: economicsData@uspto.gov
 
-slug: /uspto_cancer
+slug: uspto_cancer
 tags:
 - health
 - cancer

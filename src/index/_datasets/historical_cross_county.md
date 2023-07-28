@@ -15,7 +15,7 @@ maintained_by: Diego A. Comin, diego.comin@nyu.edu, Bart Hobijin, bart.hobijn@ny
 related_publications: 'Comin, D. and Hohijn B., "Cross-Country Technological Adoption:
   Making the Theories Face the Facts". Journal of Monetary Economics, January 2004,
   pp. 39-83.'
-slug: /historical_cross_county
+slug: historical_cross_county
 tags:
 - geography
 - technology

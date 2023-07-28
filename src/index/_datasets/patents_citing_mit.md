@@ -9,7 +9,7 @@ last_edit: Mon, 30 May 2022 12:32:12 GMT
 location: https://www.lens.org/lens/search/patent/list?collectionId=22790&p=0&n=10
 maintained_by: The Lens
 record_creation_timestamp: 11/19/2020 17:20:46
-slug: /patents_citing_mit
+slug: patents_citing_mit
 tags:
 - citation
 - scholarly literature

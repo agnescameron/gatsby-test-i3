@@ -8,7 +8,7 @@ description: The PatentsView platform is built on a newly developed database tha
   citation patterns, and co-inventor networks.
 location: https://patentsview.org/apis/api-query-language
 related_projects: {}
-slug: /patentsview_api
+slug: patentsview_api
 tags:
 - disambiguation
 - entity reconciliation

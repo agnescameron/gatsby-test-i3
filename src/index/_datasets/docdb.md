@@ -7,7 +7,7 @@ description: 'DOCDB is the EPO''s master documentation database with worldwide c
 last_edit: Thu, 02 Dec 2021 13:22:51 GMT
 location: https://www.epo.org/searching-for-patents/data/bulk-data-sets/docdb.html#tab-1
 maintained_by: EPO
-slug: /docdb
+slug: docdb
 tags:
 - patents
 - bibliographic data

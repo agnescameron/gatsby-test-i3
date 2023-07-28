@@ -12,7 +12,7 @@ description: 'This includes patent level metadata, 1926-1975 (OCRed from USPTO I
 documentation: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DKESRC
 error_metrics: 'Yes'
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DKESRC
-slug: /gov_funded_us_patents
+slug: gov_funded_us_patents
 terms_of_use: 'CC0 - "Public Domain Dedication" '
 timeframe: 1926-2017
 title: Government-funded US patents

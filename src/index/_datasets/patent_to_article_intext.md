@@ -11,7 +11,7 @@ documentation: http://www.kevinbryanecon.com/UsersGuidetoIntextCitations.pdf
 last_edit: Wed, 01 Dec 2021 19:37:35 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZEZWBX
 maintained_by: Kevin Bryan, http://www.kevinbryanecon.com/
-slug: /patent_to_article_intext
+slug: patent_to_article_intext
 tags:
 - in-text
 - scholarly literature

@@ -13,7 +13,7 @@ description: ' UniChem is large-scale non-redundant database of pointers between
 documentation: https://chembl.gitbook.io/unichem/unichem-2.0/unichem-2.0-beta
 last_edit: Fri, 03 Dec 2021 11:44:45 GMT
 location: https://www.ebi.ac.uk/unichem/beta/
-slug: /unichem
+slug: unichem
 tags:
 - biotechnology
 - health

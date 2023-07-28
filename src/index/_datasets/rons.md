@@ -28,7 +28,7 @@ related_projects:
 relationships:
 - patcit
 - lens
-slug: /rons
+slug: rons
 tags:
 - citation
 - scholarly literature

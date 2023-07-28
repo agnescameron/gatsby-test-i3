@@ -13,7 +13,7 @@ location: https://ipindiaservices.gov.in/publicsearch
 maintained_by: Intellectual Property India
 record_creation_timestamp: 08/31/2021, 08:28:19
 references: null
-slug: /india_patent_database
+slug: india_patent_database
 tags:
 - India
 - patents

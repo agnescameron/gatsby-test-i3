@@ -20,7 +20,7 @@ last_edit: Wed, 01 Dec 2021 19:36:07 GMT
 location: https://zenodo.org/record/3369582
 maintained_by: Gaétan de Rassenfosse
 record_creation_timestamp: 11/26/2020 17:20:46
-slug: /us_gov_patents
+slug: us_gov_patents
 tags:
 - research funding
 - United States

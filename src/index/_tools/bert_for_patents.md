@@ -12,7 +12,7 @@ documentation: https://github.com/google/patents-public-data/blob/master/example
 last_edit: Thu, 02 Dec 2021 02:14:21 GMT
 location: https://github.com/google/patents-public-data/blob/master/models/BERT%20for%20Patents.md
 related_projects: {}
-slug: /bert_for_patents
+slug: bert_for_patents
 terms_of_use: http://www.apache.org/licenses/LICENSE-2.0
 title: Google BERT for Patents
 uuid: b8c70382-7b6f-43b2-a6c0-c788e970e99e

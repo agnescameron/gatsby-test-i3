@@ -13,7 +13,7 @@ description: 'Census Block Distances are great-circle distances calculated using
 last_edit: Fri, 03 Dec 2021 15:25:59 GMT
 location: https://www.nber.org/research/data/block-distance-database
 maintained_by: data@nber.org
-slug: /census_block_distance
+slug: census_block_distance
 tags:
 - population
 - geography

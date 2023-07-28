@@ -27,7 +27,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 08/17/2021, 11:51:42
 related_publications: ' https://doi.org/10.1016/j.dib.2020.106615'
-slug: /missing_applicant_codes
+slug: missing_applicant_codes
 tags:
 - Patents
 - Location of applicants

@@ -21,7 +21,7 @@ related_projects: {}
 related_publications: '"The American Business Cycle: Continuity and Change" Edited
   by Robert J. Gordon. National Bureau of Economic Research Studies in Business Cycles
   Volume 25, Univerisity of Chicago Press 1986, https://www.nber.org/books-and-chapters/american-business-cycle-continuity-and-change'
-slug: /american_business_cycle
+slug: american_business_cycle
 title: American Business Cycle
 uuid: 6520861b-6600-4dcc-9ef2-2f0984283d7c
 ---

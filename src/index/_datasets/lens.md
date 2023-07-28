@@ -13,7 +13,7 @@ last_edit: Thu, 16 Feb 2023 04:59:11 GMT
 location: https://lens.org/
 maintained_by: "Cambia Foundation, \nhttps://about.lens.org/contact-us/"
 record_creation_timestamp: 11/28/2020 17:20:46
-slug: /lens
+slug: lens
 tags:
 - citation
 - scholarly literature

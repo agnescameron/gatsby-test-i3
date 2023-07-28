@@ -14,7 +14,7 @@ documentation: https://github.com/google/patents-public-data/tree/master/models/
 last_edit: Wed, 04 May 2022 11:04:06 GMT
 location: https://github.com/google/patents-public-data/tree/master/models/landscaping
 related_projects: {}
-slug: /patent_landscaping
+slug: patent_landscaping
 tags:
 - machine learning
 - patent landscaping

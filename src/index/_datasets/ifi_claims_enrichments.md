@@ -11,7 +11,7 @@ last_edit: 04/13/2022, 15:00:02
 location: https://www.ificlaims.com/product/product-data-enrichments.htm
 maintained_by: IFI CLAIMS
 
-slug: /ifi_claims_enrichments
+slug: ifi_claims_enrichments
 tags:
 - analytics
 - patents

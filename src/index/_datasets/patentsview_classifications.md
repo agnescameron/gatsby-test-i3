@@ -8,7 +8,7 @@ last_edit: 10/26/2021
 location: https://patentsview.org/download/data-download-tables
 maintained_by: USPTO
 record_creation_timestamp: 10/26/2021
-slug: /patentsview_classifications
+slug: patentsview_classifications
 tags:
 - United States
 - classifications

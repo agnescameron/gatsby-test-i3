@@ -17,7 +17,7 @@ last_edit: Wed, 05 Apr 2023 15:34:10 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DKESRC
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 12/05/2020 17:20:46
-slug: /gov_research_fuels_innovation
+slug: gov_research_fuels_innovation
 tags:
 - research funding
 - United States

@@ -21,7 +21,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 11/24/2020 17:20:46
 related_publications: https://doi.org/10.1038/s41597-019-0264-6
-slug: /geocoding_patents
+slug: geocoding_patents
 tags:
 - geography
 - location of inventors

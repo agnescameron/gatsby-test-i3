@@ -20,7 +20,7 @@ location: https://storage.googleapis.com/jmk_public/Kuhn-Younge-Marco_Patent_Cit
 maintained_by: Jeff Kuhn
 record_creation_timestamp: 11/14/2020 17:47:00
 related_publications: https://ssrn.com/abstract=2714954
-slug: /patent_citation_similarity
+slug: patent_citation_similarity
 tags:
 - similarity
 - citation

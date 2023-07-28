@@ -23,7 +23,7 @@ last_edit: Fri, 03 Dec 2021 22:57:37 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/5F1RRI
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 5/14/2022 14:41:04
-slug: /co_authorship_disambiguation
+slug: co_authorship_disambiguation
 tags:
 - coauthor network
 - disambiguation

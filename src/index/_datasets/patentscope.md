@@ -9,7 +9,7 @@ last_edit: 10/13/2021
 location: https://www.wipo.int/patentscope/en/
 maintained_by: WIPO
 record_creation_timestamp: 10/13/2021
-slug: /patentscope
+slug: patentscope
 tags:
 - patents
 - legal

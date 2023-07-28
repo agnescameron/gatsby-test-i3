@@ -18,7 +18,7 @@ last_edit: Mon, 10 Oct 2022 18:01:15 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QT4OJS
 maintained_by: Contact maintainer through Dataverse
 record_creation_timestamp: 08/17/2021, 09:21:25
-slug: /histpat_international
+slug: histpat_international
 tags:
 - Historical Patents
 - Technological Change

@@ -10,7 +10,7 @@ documentation: https://www.mediawiki.org/wiki/Citoid
 last_edit: Wed, 01 Dec 2021 19:24:42 GMT
 location: https://en.wikipedia.org/api/rest_v1/#/Citation/getCitation
 related_projects: {}
-slug: /citoid
+slug: citoid
 tags:
 - citation
 terms_of_use: "API: Limit client to no more than 200 requests/sec \n\ncode:\nhttp://www.apache.org/licenses/LICENSE-2.0"

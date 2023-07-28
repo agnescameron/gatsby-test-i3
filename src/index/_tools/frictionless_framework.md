@@ -7,7 +7,7 @@ description: Frictionless is a framework to describe, extract, validate, and tra
 documentation: https://framework.frictionlessdata.io/docs/guides/introduction/
 location: https://framework.frictionlessdata.io/
 related_projects: {}
-slug: /frictionless_framework
+slug: frictionless_framework
 tags:
 - reproducibility
 terms_of_use: MIT License

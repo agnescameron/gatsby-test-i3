@@ -60,7 +60,7 @@ schema_fields:
 - teoReliefGranted
 - complainant
 - targetDate
-slug: /unfair_import_investigations
+slug: unfair_import_investigations
 tags:
 - import
 - legal

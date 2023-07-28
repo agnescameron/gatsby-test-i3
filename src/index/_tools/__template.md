@@ -2,7 +2,7 @@
 layout: default
 title:
 record_creation_timestamp:
-slug: /location:
+slug: location:
 description:
 documentation:
 authors:

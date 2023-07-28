@@ -8,7 +8,7 @@ description: These Guidelines are designed both for general users of patent info
 last_edit: Sat, 18 Dec 2021 11:28:59 GMT
 location: https://www.wipo.int/publications/en/details.jsp?id=3938
 related_projects: {}
-slug: /wipo_guidelines
+slug: wipo_guidelines
 title: WIPO Guidelines for Preparing Patent Landscape Reports
 uuid: 522a2b50-9b87-4ba3-851e-c52354adf368
 ---

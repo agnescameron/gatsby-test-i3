@@ -10,7 +10,7 @@ description: PatentCity is a dataset on the location of patentees since the 19th
 last_edit: Thu, 02 Dec 2021 13:36:38 GMT
 location: https://mailchi.mp/e0495246a573/patentcity
 maintained_by: Antonin Bergeaud
-slug: /patentcity
+slug: patentcity
 tags:
 - location of inventors
 - geography
