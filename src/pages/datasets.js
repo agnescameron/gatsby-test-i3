@@ -25,7 +25,7 @@ const DatasetPage = () => {
         {nodes.map(node => (
           <li key={node.frontmatter.slug}>
             <span>
-              < Link to={node.frontmatter.slug}> { node.frontmatter.title } -> </Link> 
+              < Link to={"/" + node.frontmatter.slug}> { node.frontmatter.title } -> </Link> 
                 <div dangerouslySetInnerHTML={{__html: node.frontmatter.description}} />
             </span>
           </li>

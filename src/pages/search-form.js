@@ -87,7 +87,7 @@ const SearchForm = ({ initialQuery = "" }) => {
       <div>
         { results.length > 0 && <div><b>Quick search results:</b> 
           { results.filter( (item, i) => i < 5 ).map( 
-            (result, j) => <li key={j}> {result.title} </li> 
+            (result, j) => <li key={j}> <Link to={result.slug}> {result.title} </Link></li> 
             )}</div>}
       </div>
       </div>
