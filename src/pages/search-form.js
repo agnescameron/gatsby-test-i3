@@ -41,7 +41,8 @@ const SearchForm = ({ initialQuery = "" }) => {
       res = index.search(q, {
           fields: {
               title: {boost: 10},
-              description: {boost: 5}
+              description: {boost: 5},
+              contents: {boost: 3}
           }
         }).map(({ ref }) => {
         // Map search results to an array of {slug, title, excerpt} objects

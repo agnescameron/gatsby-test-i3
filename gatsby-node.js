@@ -12,6 +12,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter {
       title: String!
       authors: String
+      description: String
       tags: [String]
       schema_fields: [String]
       slug: String!
@@ -88,6 +89,7 @@ const createIndex = async (dataNodes, type, cache) => {
     const {slug} = node.fields
     console.log('slug is', slug)
     const title = node.frontmatter.title
+    const description = node.frontmatter.description
     let html = await Promise.all([
       type.getFields().html.resolve(node),
     ])
@@ -96,6 +98,7 @@ const createIndex = async (dataNodes, type, cache) => {
     documents.push({
       slug: node.fields.slug,
       title: node.frontmatter.title,
+      description: node.frontmatter.description,
       content: striptags(html),
     })
     store[slug] = {
@@ -106,6 +109,7 @@ const createIndex = async (dataNodes, type, cache) => {
     this.ref(`slug`)
     this.field(`title`)
     this.field(`description`)
+    this.field(`content`)
     for (const doc of documents) {
       this.add(doc)
     }
