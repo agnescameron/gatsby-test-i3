@@ -20,7 +20,7 @@ tags:
 - trade
 - development
 title: NBER Public Use Data Archive
-slug: guides/nber
+slug: nber
 uuid: f891497d-5229-4a5b-8211-83a69e296bb4
 ---
 

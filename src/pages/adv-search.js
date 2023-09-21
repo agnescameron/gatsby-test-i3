@@ -1,5 +1,5 @@
 /* src/components/search-form.js */
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useContext, useReducer } from "react"
 import { navigate } from "gatsby"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
@@ -31,7 +31,7 @@ const SearchForm = ({ initialQuery = "" }) => {
 
   // On input change use the current value of the input field (e.target.value)
   // to update the state's query value
-  const quickSearch = event => {
+  const advSearch = event => {
     // const q = e.target.value
     let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
     setQuery(event.target.value)
@@ -80,8 +80,7 @@ const SearchForm = ({ initialQuery = "" }) => {
         id="search-input"
         type="search"
         value={query}
-        placeholder="dataset title"
-        onChange={quickSearch}
+        placeholder="e.g. duck"
       />
       <button type="submit">Go</button>
     </form>

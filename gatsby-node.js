@@ -11,7 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Frontmatter {
       title: String!
-      authors: String
+      authors: [String]
       description: String
       tags: [String]
       schema_fields: [String]
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data, errors } = await graphql(`
   {
-	  datasets: allMarkdownRemark {
+	  pages: allMarkdownRemark {
 	    nodes {
 	    	html
 	    	id
@@ -43,12 +43,12 @@ exports.createPages = async ({ graphql, actions }) => {
   if (errors) {
     console.log(errors)
   }
-  data.datasets.nodes.forEach((dataset, index) => {
+  data.pages.nodes.forEach((page, index) => {
     createPage({
-      path: dataset.frontmatter.slug,
+      path: page.frontmatter.slug,
       component: require.resolve(`./src/templates/post.js`),
       context: {
-      	id: dataset.id
+      	id: page.id
     	}
     })
   })
@@ -64,6 +64,9 @@ exports.createResolvers =  async ({ cache, createResolvers }) => {
         resolve: async (source, args, context, info) => {
           const dataNodes = await context.nodeModel.findAll({
             type: `MarkdownRemark`,
+            query: {
+              filter: { fileAbsolutePath: {regex: "/_datasets/"  } },
+            },
           })
           const type = info.schema.getType(`MarkdownRemark`)
           return createIndex(dataNodes, type, cache)
@@ -90,6 +93,8 @@ const createIndex = async (dataNodes, type, cache) => {
     console.log('slug is', slug)
     const title = node.frontmatter.title
     const description = node.frontmatter.description
+    const tags = node.frontmatter.tags
+    // console.log('frontmatter is', node.frontmatter)
     let html = await Promise.all([
       type.getFields().html.resolve(node),
     ])
@@ -98,23 +103,43 @@ const createIndex = async (dataNodes, type, cache) => {
     documents.push({
       slug: node.fields.slug,
       title: node.frontmatter.title,
+      authors: node.frontmatter.authors,
       description: node.frontmatter.description,
+      tags: node.frontmatter.tags,
       content: striptags(html),
     })
     store[slug] = {
       title,
     }
   }
-  const index = lunr(function() {
+
+
+  let allTags = [];
+  dataNodes.entries.forEach(entry => allTags = allTags.concat(entry.tags));
+  const tagJson = [...new Set(allTags)].map((tag, index) => ({tag: tag, _id: index}));
+
+  const mainIndex = lunr(function() {
     this.ref(`slug`)
     this.field(`title`)
+    this.field(`authors`)
     this.field(`description`)
     this.field(`content`)
+    this.field(`tags`)
     for (const doc of documents) {
       this.add(doc)
     }
   })
-  const json = { index: index.toJSON(), store }
-  await cache.set(cacheKey, json)
-  return json
+
+  const tagIndex = lunr(function() {
+    this.field('tag');
+    this.ref('_id');
+    tagJson.forEach( tag => {
+      this.add(tag);
+    }, this)
+  })
+
+
+  const mainJson = { index: mainIndex.toJSON(), store }
+  await cache.set(cacheKey, mainJson)
+  return mainJson
 }
