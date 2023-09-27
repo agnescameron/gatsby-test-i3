@@ -69,17 +69,43 @@ exports.createResolvers =  async ({ cache, createResolvers }) => {
             },
           })
           const type = info.schema.getType(`MarkdownRemark`)
-          return createIndex(dataNodes, type, cache)
+          return createIndex(dataNodes, type, cache, 'IndexLunr')
         },
       },
+      LunrIndexTools: {
+        type: GraphQLJSONObject,
+        resolve: async (source, args, context, info) => {
+          const toolNodes = await context.nodeModel.findAll({
+            type: `MarkdownRemark`,
+            query: {
+              filter: { fileAbsolutePath: {regex: "/_tools/"  } },
+            },
+          })
+          const type = info.schema.getType(`MarkdownRemark`)
+          return createIndex(toolNodes, type, cache, 'IndexTools')
+        },
+      },   
+      LunrIndexTags: {
+        type: GraphQLJSONObject,
+        resolve: async (source, args, context, info) => {
+          const tagNodes = await context.nodeModel.findAll({
+            type: `MarkdownRemark`,
+            query: {
+              filter: { fileAbsolutePath: {regex: "/_datasets/"  } },
+            },
+          })
+          const type = info.schema.getType(`MarkdownRemark`)
+          return createTagIndex(tagNodes, type, cache, 'IndexTags')
+        },
+      },   
     },
   })
 }
 
 
 /* gatsby-node.js */
-const createIndex = async (dataNodes, type, cache) => {
-  const cacheKey = `IndexLunr`
+const createIndex = async (dataNodes, type, cache, cacheKey) => {
+  // const cacheKey = `IndexLunr`
   const cached = await cache.get(cacheKey)
   if (cached) {
     return cached
@@ -88,9 +114,7 @@ const createIndex = async (dataNodes, type, cache) => {
   const store = {}
   // Iterate over all posts 
   for (const node of dataNodes.entries) {
-    console.log('node fields', node.fields)
     const {slug} = node.fields
-    console.log('slug is', slug)
     const title = node.frontmatter.title
     const description = node.frontmatter.description
     const tags = node.frontmatter.tags
@@ -112,12 +136,6 @@ const createIndex = async (dataNodes, type, cache) => {
       title,
     }
   }
-
-
-  let allTags = [];
-  dataNodes.entries.forEach(entry => allTags = allTags.concat(entry.tags));
-  const tagJson = [...new Set(allTags)].map((tag, index) => ({tag: tag, _id: index}));
-
   const mainIndex = lunr(function() {
     this.ref(`slug`)
     this.field(`title`)
@@ -130,7 +148,25 @@ const createIndex = async (dataNodes, type, cache) => {
     }
   })
 
-  const tagIndex = lunr(function() {
+
+  const json = { index: mainIndex.toJSON(), store }
+  await cache.set(cacheKey, json)
+  return json
+}
+
+
+const createTagIndex = async (dataNodes, type, cache, cacheKey) => {
+  let allTags = [];
+  const cached = await cache.get(cacheKey)
+  if (cached) {
+    return cached
+  }
+  const store = {}
+
+  dataNodes.entries.forEach(entry => allTags = allTags.concat(entry.frontmatter.tags));
+  const tagJson = [...new Set(allTags)].map((tag, index) => ({tag: tag, _id: index}));
+
+    const tagIndex = lunr(function() {
     this.field('tag');
     this.ref('_id');
     tagJson.forEach( tag => {
@@ -138,8 +174,7 @@ const createIndex = async (dataNodes, type, cache) => {
     }, this)
   })
 
-
-  const mainJson = { index: mainIndex.toJSON(), store }
-  await cache.set(cacheKey, mainJson)
-  return mainJson
+  const json = { index: tagIndex.toJSON(), store }
+  await cache.set(cacheKey, json)
+  return json
 }

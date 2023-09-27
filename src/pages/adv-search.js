@@ -4,7 +4,7 @@ import { navigate } from "gatsby"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
 
-const SearchForm = ({ initialQuery = "" }) => {
+const AdvSearch = ({ initialQuery = "" }) => {
   // Create a piece of state, and initialize it to initialQuery
   // query will hold the current value of the state,
   // and setQuery will let us change it
@@ -19,6 +19,8 @@ const SearchForm = ({ initialQuery = "" }) => {
         }
       }
       LunrIndex
+      LunrIndexTools
+      LunrIndexTags
     }
 `)
   
@@ -26,6 +28,10 @@ const SearchForm = ({ initialQuery = "" }) => {
   const { store } = data.LunrIndex
   // Lunr in action here
   const index = Index.load(data.LunrIndex.index)
+  const toolsIndex = Index.load(data.LunrIndexTools.index)
+  const tagsIndex = Index.load(data.LunrIndexTags.index)
+
+  console.log('got tools', toolsIndex, 'got tags', tagsIndex)
   // We need to get reference to the search input element
   const inputEl = useRef(null)
 
@@ -72,9 +78,7 @@ const SearchForm = ({ initialQuery = "" }) => {
   return (
     <div>
     <form role="search" onSubmit={handleSubmit}>
-      <label htmlFor="search-input" style={{ display: "block" }}>
-        Search for:
-      </label>
+    <h2>Advanced Search:</h2>
       <input
         ref={inputEl}
         id="search-input"
@@ -93,5 +97,5 @@ const SearchForm = ({ initialQuery = "" }) => {
       </div>
   )
 }
-export default SearchForm
+export default AdvSearch
 
