@@ -24,7 +24,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
       res = tagsIndex.search(q).map(({ ref }) => {
         // Map search results to an array of {slug, title, excerpt} objects
         return {
-          slug: ref,
+          _id: ref,
           ...tagStore[ref],
         }
       })
@@ -35,6 +35,29 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
       console.log(error)
     }
   }
+
+  const fieldSearch = event => {
+    // const q = e.target.value
+    console.log('searching fields', fieldsIndex)
+    let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
+    let res = []
+    try {
+      // Search is a lunr method
+      res = fieldsIndex.search(q).map(({ ref }) => {
+        // Map search results to an array of {slug, title, excerpt} objects
+        return {
+          _id: ref,
+          ...fieldStore[ref],
+        }
+      })
+      console.log('got results', res, q)
+      setFieldResults(res)
+        // return res
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
 
 
   const fetchResults = async (result, docs) => {
@@ -52,10 +75,10 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
     event.target.value == 'salient_fields' ? setSearchFields(true) : setSearchFields(false);
   }
 
-  const handleFieldSearchChange = async event => {
-    event.preventDefault()
-    console.log('field search change')
-  }
+  // const handleFieldSearchChange = async event => {
+  //   event.preventDefault()
+  //   console.log('field search change')
+  // }
 
   const removeFilter = async event => {
     event.preventDefault()
@@ -63,11 +86,11 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
   }
 
 
-  const handleTagSearchChange = async event => {
-    event.preventDefault()
-    console.log('tag search change')
+  // const handleTagSearchChange = async event => {
+  //   event.preventDefault()
+  //   console.log('tag search change')
 
-  }
+  // }
 
 
   return(
@@ -100,7 +123,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
             </span>
         }
         { searchFields && 
-            <span><input id="searchInput" name="fieldString" type="text" onChange={handleFieldSearchChange}/>
+            <span><input id="searchInput" name="fieldString" type="text" onChange={fieldSearch}/>
             { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{result.field} </li>)}</div>}
             </span>
         }
