@@ -88,16 +88,29 @@ exports.createResolvers =  async ({ cache, createResolvers }) => {
       LunrIndexTags: {
         type: GraphQLJSONObject,
         resolve: async (source, args, context, info) => {
-          const tagNodes = await context.nodeModel.findAll({
+          const dataNodes = await context.nodeModel.findAll({
             type: `MarkdownRemark`,
             query: {
               filter: { fileAbsolutePath: {regex: "/_datasets/"  } },
             },
           })
           const type = info.schema.getType(`MarkdownRemark`)
-          return createTagIndex(tagNodes, type, cache, 'IndexTags')
+          return createTagIndex(dataNodes, type, cache, 'IndexTags')
         },
-      },   
+      },
+      LunrIndexFields: {
+        type: GraphQLJSONObject,
+        resolve: async (source, args, context, info) => {
+          const dataNodes = await context.nodeModel.findAll({
+            type: `MarkdownRemark`,
+            query: {
+              filter: { fileAbsolutePath: {regex: "/_datasets/"  } },
+            },
+          })
+          const type = info.schema.getType(`MarkdownRemark`)
+          return createFieldIndex(dataNodes, type, cache, 'IndexFields')
+        },
+      },        
     },
   })
 }
@@ -175,6 +188,31 @@ const createTagIndex = async (dataNodes, type, cache, cacheKey) => {
   })
 
   const json = { index: tagIndex.toJSON(), store }
+  await cache.set(cacheKey, json)
+  return json
+}
+
+const createFieldIndex = async (dataNodes, type, cache, cacheKey) => {
+  let allFields = [];
+  const cached = await cache.get(cacheKey)
+  if (cached) {
+    return cached
+  }
+  const store = {}
+
+  dataNodes.entries.forEach(entry => allFields = allFields.concat(entry.frontmatter.tags));
+    const fieldJson = [...new Set(allFields)].map((field, index) => ({field: field, _id: index}));
+
+    const fieldIndex = lunr(function() {
+      this.field('field');
+      this.ref('_id');
+      fieldJson.forEach( field => {
+        this.add(field);
+      }, this)
+    })
+
+
+  const json = { index: fieldIndex.toJSON(), store }
   await cache.set(cacheKey, json)
   return json
 }
