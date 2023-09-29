@@ -174,20 +174,23 @@ const createTagIndex = async (dataNodes, type, cache, cacheKey) => {
   if (cached) {
     return cached
   }
-  const store = {}
+  const tagStore = {}
 
   dataNodes.entries.forEach(entry => allTags = allTags.concat(entry.frontmatter.tags));
   const tagJson = [...new Set(allTags)].map((tag, index) => ({tag: tag, _id: index}));
+  console.log('tagjson', tagJson)
 
-    const tagIndex = lunr(function() {
-    this.field('tag');
+  const tagIndex = lunr(function() {
     this.ref('_id');
-    tagJson.forEach( tag => {
-      this.add(tag);
+    this.field('tag');
+    tagJson.forEach( entry => {
+      this.add(entry);
+      const tag = entry.tag
+      tagStore[entry._id] = { tag }
     }, this)
   })
 
-  const json = { index: tagIndex.toJSON(), store }
+  const json = { index: tagIndex.toJSON(), tagStore }
   await cache.set(cacheKey, json)
   return json
 }

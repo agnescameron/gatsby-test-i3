@@ -51,13 +51,16 @@ const AdvSearch = ({ initialQuery = "" }) => {
   
   // LunrIndex is available via page query
   const { store } = data.LunrIndex
+  const { toolStore } = data.LunrIndexTools
+  const { tagStore } = data.LunrIndexTags
+  const { fieldStore } = data.LunrIndexFields
   // Lunr in action here
   const index = Index.load(data.LunrIndex.index)
   const toolsIndex = Index.load(data.LunrIndexTools.index)
   const tagsIndex = Index.load(data.LunrIndexTags.index)
   const fieldsIndex = Index.load(data.LunrIndexFields.index)
 
-  console.log('got tools', toolsIndex, 'got tags', tagsIndex)
+  // console.log('got tools', toolsIndex, 'got tags', tagsIndex)
   // We need to get reference to the search input element
   const inputEl = useRef(null)
 
@@ -174,6 +177,10 @@ const AdvSearch = ({ initialQuery = "" }) => {
                 tagsIndex={tagsIndex}
                 fieldsIndex={fieldsIndex}
                 toolsIndex={toolsIndex}
+                tagStore={tagStore}
+                toolStore={toolStore}
+                fieldStore={fieldStore}
+                handleFilterChange={handleFilterChange}
                 /> )
                }
                 </>

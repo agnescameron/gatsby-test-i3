@@ -7,23 +7,49 @@ const formReducer = (state, event) => {
    }
 }
 
-const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex}) => {
+const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolStore, fieldStore, handleFilterChange}) => {
     const [searchTags, setSearchTags] = React.useState(false);
     const [searchFields, setSearchFields] = React.useState(false);
     const [tagResults, setTagResults] = React.useState([]);
     const [fieldResults, setFieldResults] = React.useState([]);
  
 
+  const tagSearch = event => {
+    // const q = e.target.value
+    console.log('searching tags', tagsIndex)
+    let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
+    let res = []
+    try {
+      // Search is a lunr method
+      res = tagsIndex.search(q).map(({ ref }) => {
+        // Map search results to an array of {slug, title, excerpt} objects
+        return {
+          slug: ref,
+          ...tagStore[ref],
+        }
+      })
+      console.log('got results', res, q)
+      setTagResults(res)
+        // return res
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   const fetchResults = async (result, docs) => {
     console.log('fetching')
   }
 
-  const handleFilterChange = event => {
-    console.log('filter', event.target.value)
-  }
+  // const handleFilterChange = (num, event) => {
+  //   console.log('filter', num, event.target.value)
+  // }
 
   const handleFilterFieldChange = event => {
     console.log('filter', event.target.value)
+    handleFilterChange(num, event)
+    event.target.value == 'tags' ? setSearchTags(true) : setSearchTags(false);
+    event.target.value == 'salient_fields' ? setSearchFields(true) : setSearchFields(false);
   }
 
   const handleFieldSearchChange = async event => {
@@ -48,7 +74,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex}) => {
     <div className="Filter">
     { num !== 0 && 
       <label>
-        <select name="modifier" id="modifier" onChange={event => handleFilterChange(index, event)}>
+        <select name="modifier" id="modifier" onChange={event => handleFilterChange(num, event)}>
           <option value="AND">AND</option>
           <option value="OR">OR</option>
           <option value="NOT">NOT</option>
@@ -69,13 +95,13 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex}) => {
 
       <label>contains:
         { searchTags && 
-            <span><input id="searchInput" name="fieldString" type="text" onChange={handleTagSearchChange}/>
-            { tagResults && <div id="inputAppend">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{Math.round(result.score*10)/10}: {result.tag} </li> )}</div>}
+            <span><input id="searchInput" name="fieldString" type="text" onChange={tagSearch}/>
+            { tagResults && <div id="inputAppend">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{result.tag} </li> )}</div>}
             </span>
         }
         { searchFields && 
             <span><input id="searchInput" name="fieldString" type="text" onChange={handleFieldSearchChange}/>
-            { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{Math.round(result.score*10)/10}: {result.field} </li>)}</div>}
+            { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{result.field} </li>)}</div>}
             </span>
         }
         { ( !searchTags && !searchFields ) && 
