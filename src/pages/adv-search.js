@@ -95,7 +95,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
     }
 
     const removeFilter = (index, event) => {
-      event.preventDefault()
+      // event.preventDefault()
       const reducedFilters = [...filters]
       reducedFilters.splice(index, 1);
       setFilters([...reducedFilters]);
@@ -181,6 +181,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
                 toolStore={toolStore}
                 fieldStore={fieldStore}
                 handleFilterChange={handleFilterChange}
+                removeFilter={removeFilter}
                 /> )
                }
                 </>

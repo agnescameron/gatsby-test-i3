@@ -1,95 +1,51 @@
-import React, { useState, useEffect, useContext, useReducer } from 'react';
+import React from 'react';
 
-const formReducer = (state, event) => {
-    return {
-     ...state,
-     [event.name]: event.value
-   }
-}
-
-const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolStore, fieldStore, handleFilterChange}) => {
+const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolStore, fieldStore, handleFilterChange, removeFilter}) => {
     const [searchTags, setSearchTags] = React.useState(false);
     const [searchFields, setSearchFields] = React.useState(false);
     const [tagResults, setTagResults] = React.useState([]);
     const [fieldResults, setFieldResults] = React.useState([]);
- 
 
   const tagSearch = event => {
-    // const q = e.target.value
-    console.log('searching tags', tagsIndex)
     let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
     let res = []
     try {
-      // Search is a lunr method
       res = tagsIndex.search(q).map(({ ref }) => {
-        // Map search results to an array of {slug, title, excerpt} objects
         return {
           _id: ref,
           ...tagStore[ref],
         }
       })
-      console.log('got results', res, q)
       setTagResults(res)
-        // return res
     } catch (error) {
       console.log(error)
     }
   }
 
   const fieldSearch = event => {
-    // const q = e.target.value
-    console.log('searching fields', fieldsIndex)
     let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
     let res = []
     try {
-      // Search is a lunr method
       res = fieldsIndex.search(q).map(({ ref }) => {
-        // Map search results to an array of {slug, title, excerpt} objects
         return {
           _id: ref,
           ...fieldStore[ref],
         }
       })
-      console.log('got results', res, q)
       setFieldResults(res)
-        // return res
     } catch (error) {
       console.log(error)
     }
   }
 
-
-
-  const fetchResults = async (result, docs) => {
-    console.log('fetching')
-  }
-
-  // const handleFilterChange = (num, event) => {
-  //   console.log('filter', num, event.target.value)
-  // }
-
   const handleFilterFieldChange = event => {
-    console.log('filter', event.target.value)
     handleFilterChange(num, event)
-    event.target.value == 'tags' ? setSearchTags(true) : setSearchTags(false);
-    event.target.value == 'salient_fields' ? setSearchFields(true) : setSearchFields(false);
+    event.target.value === 'tags' ? setSearchTags(true) : setSearchTags(false);
+    event.target.value === 'salient_fields' ? setSearchFields(true) : setSearchFields(false);
   }
 
-  // const handleFieldSearchChange = async event => {
+  // const removeFilter = async event => {
   //   event.preventDefault()
-  //   console.log('field search change')
-  // }
-
-  const removeFilter = async event => {
-    event.preventDefault()
-    console.log('removing')
-  }
-
-
-  // const handleTagSearchChange = async event => {
-  //   event.preventDefault()
-  //   console.log('tag search change')
-
   // }
 
 
