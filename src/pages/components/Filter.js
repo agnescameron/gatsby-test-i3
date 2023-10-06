@@ -6,6 +6,10 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
     const [tagResults, setTagResults] = React.useState([]);
     const [fieldResults, setFieldResults] = React.useState([]);
 
+  const setInput = (event, field) => {
+    console.log('setting inpt', event.target.textContent)
+  }
+
   const tagSearch = event => {
     let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
     let res = []
@@ -17,6 +21,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
         }
       })
       setTagResults(res)
+      handleFilterChange(num, event)
     } catch (error) {
       console.log(error)
     }
@@ -33,6 +38,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
         }
       })
       setFieldResults(res)
+      handleFilterChange(num, event)
     } catch (error) {
       console.log(error)
     }
@@ -41,7 +47,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
   const handleFilterFieldChange = event => {
     handleFilterChange(num, event)
     event.target.value === 'tags' ? setSearchTags(true) : setSearchTags(false);
-    event.target.value === 'salient_fields' ? setSearchFields(true) : setSearchFields(false);
+    event.target.value === 'schema_fields' ? setSearchFields(true) : setSearchFields(false);
   }
 
   // const removeFilter = async event => {
@@ -66,7 +72,7 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
          <option value="any">Any Field</option>
           <option value="title">Title</option>
           <option value="description">Description</option>
-          <option value="salient_fields">Dataset Headers</option>
+          <option value="schema_fields">Dataset Headers</option>
           <option value="tags">Tags</option>
           <option value="contributors">Contributors</option>
         </select>
@@ -75,12 +81,12 @@ const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, 
       <label>contains:
         { searchTags && 
             <span><input id="searchInput" name="fieldString" type="text" onChange={tagSearch}/>
-            { tagResults && <div id="inputAppend">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{result.tag} </li> )}</div>}
+            { tagResults && <div id="inputAppend">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.tag} </li> )}</div>}
             </span>
         }
         { searchFields && 
             <span><input id="searchInput" name="fieldString" type="text" onChange={fieldSearch}/>
-            { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{result.field} </li>)}</div>}
+            { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.field} </li>)}</div>}
             </span>
         }
         { ( !searchTags && !searchFields ) && 

@@ -17,6 +17,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       schema_fields: [String]
       slug: String!
       location: String
+      code: String
     }
   `
   createTypes(typeDefs)
@@ -154,8 +155,10 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
     this.field(`title`)
     this.field(`authors`)
     this.field(`description`)
+    this.field(`schema_fields`)
     this.field(`content`)
     this.field(`tags`)
+    this.field(`code`)
     for (const doc of documents) {
       this.add(doc)
     }

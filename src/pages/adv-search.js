@@ -30,7 +30,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
       "any": "Any Field", 
       "title": "Title", 
       "description": "Description", 
-      "salient_fields": "Dataset Headers", 
+      "schema_fields": "Dataset Headers", 
       "tags": "Tags", 
       "contributors": "Contributors", 
    }
@@ -55,7 +55,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
   const { tagStore } = data.LunrIndexTags
   const { fieldStore } = data.LunrIndexFields
   // Lunr in action here
-  const index = Index.load(data.LunrIndex.index)
+  const mainIndex = Index.load(data.LunrIndex.index)
   const toolsIndex = Index.load(data.LunrIndexTools.index)
   const tagsIndex = Index.load(data.LunrIndexTags.index)
   const fieldsIndex = Index.load(data.LunrIndexFields.index)
@@ -105,23 +105,24 @@ const AdvSearch = ({ initialQuery = "" }) => {
   // to update the state's query value
   const advSearch = event => {
     // const q = e.target.value
-      let searchString='';
-      filters.forEach( filter => {
-        console.log(filter)
-        let modifier = '';
-        if(filter.modifier === "AND") modifier = '+';
-        else if(filter.modifier === "NOT") modifier = '-';
-        searchString += filter.field === 'any' ? modifier + filter.fieldString + " " : modifier + filter.field + ":" + filter.fieldString + " ";
-      })
+    event.preventDefault();
+    let searchString='';
+    filters.forEach( filter => {
+      console.log('filter', filter)
+      let modifier = '';
+      if(filter.modifier === "AND") modifier = '+';
+      else if(filter.modifier === "NOT") modifier = '-';
+      searchString += filter.field === 'any' ? modifier + filter.fieldString + " " : modifier + filter.field + ":" + filter.fieldString + " ";
+    })
 
     // let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
     // setQuery(event.target.value)
-      Object.keys(currentForm).forEach(key => {
-        if (currentForm[key] === true) searchString += '+' + key + ":* ";
-      })
+    Object.keys(currentForm).forEach(key => {
+      if (currentForm[key] === true) searchString += '+' + key + ":* ";
+    })
 
-      const index = currentForm.index === 'datasets' ? index : toolsIndex
-      // const docs = currentForm.index === 'datasets' ? props.datasets : props.tools
+    const index = currentForm.index === 'datasets' ? mainIndex : toolsIndex
+    // const docs = currentForm.index === 'datasets' ? props.datasets : props.tools
 
 
     let res = []
@@ -173,7 +174,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
               { filters.map( (filter, i) => <Filter 
                 key={i}
                 num={i} 
-                index={index}
+                index={mainIndex}
                 tagsIndex={tagsIndex}
                 fieldsIndex={fieldsIndex}
                 toolsIndex={toolsIndex}
