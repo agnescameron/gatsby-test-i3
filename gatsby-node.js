@@ -180,6 +180,9 @@ const createTagIndex = async (dataNodes, type, cache, cacheKey) => {
   const tagStore = {}
 
   dataNodes.entries.forEach(entry => allTags = allTags.concat(entry.frontmatter.tags));
+
+  //filter undefined and convert to lower case
+  allTags = allTags.map(tag => tag !== undefined && tag.toLowerCase())
   const tagJson = [...new Set(allTags)].map((tag, index) => ({tag: tag, _id: index}));
   console.log('tagjson', tagJson)
 

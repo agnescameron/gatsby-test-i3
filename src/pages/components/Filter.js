@@ -7,9 +7,9 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
     const [fieldResults, setFieldResults] = React.useState([]);
 
   const setInput = (event, field) => {
-    const input = document.getElementById('searchInput')
+    const input = document.getElementById('searchInput' + num)
     const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
-    nativeInputValueSetter.call(input, event.target.textContent);
+    nativeInputValueSetter.call(input, event.target.textContent.trim());
 
     const input_select = new Event('input', { bubbles: true});
     input.dispatchEvent(input_select);
@@ -85,12 +85,12 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
 
       <label>contains:
         { searchTags && 
-            <span><input id="searchInput" name="fieldString" type="text" onChange={tagSearch}/>
+            <span><input id={"searchInput" + num} name="fieldString" type="text" onChange={tagSearch}/>
             { tagResults && <div id="inputAppend">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.tag} </li> )}</div>}
             </span>
         }
         { searchFields && 
-            <span><input id="searchInput" name="fieldString" type="text" onChange={fieldSearch}/>
+            <span><input id={"searchInput" + num} name="fieldString" type="text" onChange={fieldSearch}/>
             { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.field} </li>)}</div>}
             </span>
         }
