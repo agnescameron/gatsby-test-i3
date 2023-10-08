@@ -209,6 +209,8 @@ const createFieldIndex = async (dataNodes, type, cache, cacheKey) => {
   }
   const fieldStore = {}
 
+
+  allFields = allFields.map(field => field !== undefined && field.toLowerCase())
   dataNodes.entries.forEach(entry => allFields = allFields.concat(entry.frontmatter.salient_fields));
     const fieldJson = [...new Set(allFields)].map((field, index) => ({field: field, _id: index}));
 

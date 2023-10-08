@@ -208,7 +208,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
             <button>run advanced search</button>
           </form>
           <div>
-            { results.length > 0 && <div><b>Advanced search results:</b> {results.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}>{Math.round(result.score*10)/10}: {result.title} </li> )}</div>}
+            { results.length > 0 && <div><b>Advanced search results:</b> {results.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}><Link to={result.slug}> {result.title} </Link></li> )}</div>}
           </div>
           </div>
         </div>
