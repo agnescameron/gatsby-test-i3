@@ -1,13 +1,18 @@
 import React from 'react';
 
-const Filter = ({key, num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolStore, fieldStore, handleFilterChange, removeFilter}) => {
+const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolStore, fieldStore, handleFilterChange, removeFilter}) => {
     const [searchTags, setSearchTags] = React.useState(false);
     const [searchFields, setSearchFields] = React.useState(false);
     const [tagResults, setTagResults] = React.useState([]);
     const [fieldResults, setFieldResults] = React.useState([]);
 
   const setInput = (event, field) => {
-    console.log('setting inpt', event.target.textContent)
+    const input = document.getElementById('searchInput')
+    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
+    nativeInputValueSetter.call(input, event.target.textContent);
+
+    const input_select = new Event('input', { bubbles: true});
+    input.dispatchEvent(input_select);
   }
 
   const tagSearch = event => {

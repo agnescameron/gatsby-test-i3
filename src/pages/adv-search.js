@@ -109,10 +109,12 @@ const AdvSearch = ({ initialQuery = "" }) => {
     let searchString='';
     filters.forEach( filter => {
       console.log('filter', filter)
-      let modifier = '';
-      if(filter.modifier === "AND") modifier = '+';
-      else if(filter.modifier === "NOT") modifier = '-';
-      searchString += filter.field === 'any' ? modifier + filter.fieldString + " " : modifier + filter.field + ":" + filter.fieldString + " ";
+      if(filter.fieldString !== ""){
+        let modifier = '';
+        if(filter.modifier === "AND") modifier = '+';
+        else if(filter.modifier === "NOT") modifier = '-';
+        searchString += filter.field === 'any' ? modifier + filter.fieldString + " " : modifier + filter.field + ":" + filter.fieldString + " ";
+      }
     })
 
     // let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
