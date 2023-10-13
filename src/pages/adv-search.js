@@ -111,10 +111,11 @@ const AdvSearch = ({ initialQuery = "" }) => {
       console.log('filter', filter)
       if(filter.fieldString !== ""){
         let modifier = '+';
+        const fieldString = filter.fieldString.replace(/(?=[() ])/g, '\\')
         if(filter.modifier === "AND") modifier = '+';
         else if(filter.modifier === "NOT") modifier = '-';
         else if(filter.modifier === "OR") modifier = '';
-        searchString += filter.field === 'any' ? modifier + filter.fieldString.replace(/(?=[() ])/g, '\\') + " " : modifier + filter.field + ":" + filter.fieldString.replace(/(?=[() ])/g, '\\') + " ";
+        searchString += filter.field === 'any' ? modifier + fieldString + " " : modifier + filter.field + ":" + fieldString + " ";
       }
     })
 

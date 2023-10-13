@@ -1,5 +1,4 @@
 ---
-layout: default
 api_or_bulk_downloads: Bulk
 authors: Cyril Verluise, Gabriele Cristelli, Kyle Higham, Lucas Violon, Gaétan de
   Rassenfosse
@@ -8,8 +7,12 @@ citation: 'Cyril Verluise, Gabriele Cristelli, Kyle Higham, Lucas Violon, & Gaé
   de Rassenfosse. (2020). PatCit: A Comprehensive Dataset of Patent Citations (Version
   0.3.1) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4391095'
 code: https://cverluise.github.io/notebook
-contributors: Cyril Verluise, Gabriele Cristelli, Kyle Higham, Lucas Violon, Gaétan
-  de Rassenfosse
+contributors:
+- Cyril Verluise
+- Gabriele Cristelli
+- Kyle Higham
+- Lucas Violon
+- Gaétan de Rassenfosse
 cost: None
 datasets_and_publications_using_this_dataset: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3754772
 description: 'In-text and front page citations to non-patent literature and in-text
@@ -22,9 +25,10 @@ description: 'In-text and front page citations to non-patent literature and in-t
 documentation: https://cverluise.github.io/PatCit/
 doi: https://doi.org/10.5281/zenodo.3710993
 error_metrics: 'yes'
-last_edit: Fri, 28 Apr 2023 12:19:59 GMT
+last_edit: Mon, 25 Sep 2023 19:06:41 GMT
 location: https://doi.org/10.5281/zenodo.3710993
 maintained_by: Cyril Verluise
+open_access: 'TRUE'
 record_creation_timestamp: 11/17/2020 10:38:00
 related_project_shortnames: rons, lens
 related_projects:
@@ -36,11 +40,7 @@ related_publications: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=375477
 relationships:
 - rons
 - lens
-salient_fields: 
-- DOI
-- PMID
-- ISSN
-- ISBN
+salient_fields: DOI, PMID, ISSN, ISBN
 schema_fields:
 - DOI
 - npl_cat_language_flag
@@ -98,7 +98,7 @@ schema_fields:
 - abstract
 - reference_doi
 - citation
-slug: patcit
+shortname: patcit
 tags:
 - citation
 - scholarly literature
@@ -108,9 +108,10 @@ tags:
 - science
 - database
 - Wikipedia
+- validation
 terms_of_use: CC-BY 4.0 International
 timeframe: 1836-2018
 title: PatCit
 uuid: bd8a562a-ce58-4a61-925d-88f0d0695974
-versioning: 'Yes'
+versioning: 'TRUE'
 ---

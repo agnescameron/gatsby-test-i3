@@ -1,6 +1,6 @@
 ---
-layout: default
-contributors: European Bioinformatics Institute
+contributors:
+- European Bioinformatics Institute
 description: ' UniChem is large-scale non-redundant database of pointers between chemical
   structures and EMBL-EBI chemistry resources. Its purpose is to optimise the efficiency
   with which structure-based hyperlinks may be built and maintained between chemistry-based
@@ -11,9 +11,10 @@ description: ' UniChem is large-scale non-redundant database of pointers between
   is not small molecules, but which may nevertheless contain some small molecule information
   (eg: Gene Expression Atlas, PDBe). '
 documentation: https://chembl.gitbook.io/unichem/unichem-2.0/unichem-2.0-beta
-last_edit: Fri, 03 Dec 2021 11:44:45 GMT
+last_edit: Mon, 19 Jun 2023 16:35:37 GMT
 location: https://www.ebi.ac.uk/unichem/beta/
-slug: unichem
+open_access: 'FALSE'
+shortname: unichem
 tags:
 - biotechnology
 - health
@@ -22,4 +23,5 @@ tags:
 - medical
 title: UniChem
 uuid: 640ed301-691a-45c6-aa9d-5f8364424044
+versioning: 'FALSE'
 ---

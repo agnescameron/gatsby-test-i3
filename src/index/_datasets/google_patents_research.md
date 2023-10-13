@@ -1,17 +1,19 @@
 ---
-layout: default
 bigquery: https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=labeled_patents&page=dataset
 citation: Google Patents Research Data by Google, based on data provided by IFI CLAIMS
   Patent Services
-contributors: Google Patents, IFI CLAIMS Patent Services
+contributors:
+- Google Patents
+- IFI CLAIMS Patent Services
 cost: None
 description: Google Patents Research Data contains the output of much of the data
   analysis work used in Google Patents (patents.google.com), including machine translations
   of titles and abstracts from Google Translate, embedding vectors, extracted top
   terms, similar documents, and forward references.
-last_edit: Wed, 25 May 2022 19:05:21 GMT
+last_edit: Mon, 19 Jun 2023 16:42:32 GMT
 location: https://console.cloud.google.com/marketplace/product/google_patents_public_datasets/google-patents-research-data
 maintained_by: Google Patents https://patents.google.com/
+open_access: 'TRUE'
 schema_fields:
 - invention_type
 - title_line_1
@@ -32,7 +34,7 @@ schema_fields:
 - x_relative_max
 - y_relative_max
 - class_international
-slug: google_patents_research
+shortname: google_patents_research
 tags:
 - terms
 - citation
@@ -41,5 +43,5 @@ tags:
 terms_of_use: Creative Commons Attribution 4.0 International License
 title: Google Patents Research Data
 uuid: 8bb14de6-ace9-4acb-a1ca-66b6d088a574
-versioning: 'Yes'
+versioning: 'TRUE'
 ---

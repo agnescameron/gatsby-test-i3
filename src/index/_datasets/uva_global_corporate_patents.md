@@ -1,9 +1,12 @@
 ---
-layout: default
 citation: 'Jan Bena, Miguel A. Ferreira, Pedro Matos, and Pedro Pires. "Are foreign
   investors locusts? The long-term effects of foreign institutional ownership." Journal
   of Financial Economics 126, no. 1 (2017): 122-146'
-contributors: Jan Bena, Miguel A. Ferreira, Pedro Matos, Pedro Pires
+contributors:
+- Jan Bena
+- Miguel A. Ferreira
+- Pedro Matos
+- Pedro Pires
 cost: None
 description: 'The dataset has information on about 3 million USPTO patents, which
   were granted between 1980 and 2017, assigned to publicly listed companies worldwide,
@@ -11,11 +14,12 @@ description: 'The dataset has information on about 3 million USPTO patents, whic
   Number, as given by the USPTO, GVKEY, as the firm identifier, from the S&P Compustat
   Global database. '
 documentation: https://patents.darden.virginia.edu/documents/DataConstructionDetails_v01.pdf
-last_edit: Tue, 26 Apr 2022 18:17:17 GMT
+last_edit: Wed, 12 Jul 2023 19:16:40 GMT
 location: https://patents.darden.virginia.edu/
 maintained_by: GCPD@darden.virginia.edu
+open_access: 'TRUE'
 record_creation_timestamp: 11/13/2020 17:47:00
-slug: uva_global_corporate_patents
+shortname: uva_global_corporate_patents
 tags:
 - United States
 - disambiguation
@@ -23,4 +27,5 @@ terms_of_use: CC BY-NC 4.0 Attribution-NonCommercial 4.0 International
 timeframe: 1980-2017
 title: UVA Darden Global Corporate Patent Dataset (disambiguated assignees)
 uuid: e80542a8-a9bb-4205-8364-c0e9f3a2b683
+versioning: 'FALSE'
 ---

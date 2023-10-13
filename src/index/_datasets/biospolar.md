@@ -1,14 +1,13 @@
 ---
-layout: default
 api_or_bulk_downloads: CC-By Attribution 4.0 International
-citation: "@article{oldham_biospolar_2019,\n        title = {Biospolar {Antarctic}
-  {Literature} and {Patents}},\n        url = {https://osf.io/py6ve/},\n        doi
-  = {10.17605/OSF.IO/PY6VE},\n        abstract = {Mapping the scientific and patent
-  landscapes for biodiversity based research and innovation from Antarctica and the
-  Southern Ocean. Created under the Biospolar Project, Research Council of Norway
-  (RCN project number 257631/E10) \n    Hosted on the Open Science Framework},\n        language
-  = {en},\n        urldate = {2021-09-10},\n        author = {Oldham, Paul},\n        month
-  = may,\n        year = {2019},\n}\n"
+citation: "@article{oldham_biospolar_2019,\n        title = {Biospolar {Antarctic}\
+  \ {Literature} and {Patents}},\n        url = {https://osf.io/py6ve/},\n       \
+  \ doi = {10.17605/OSF.IO/PY6VE},\n        abstract = {Mapping the scientific and\
+  \ patent landscapes for biodiversity based research and innovation from Antarctica\
+  \ and the Southern Ocean. Created under the Biospolar Project, Research Council\
+  \ of Norway (RCN project number 257631/E10) \n    Hosted on the Open Science Framework},\n\
+  \        language = {en},\n        urldate = {2021-09-10},\n        author = {Oldham,\
+  \ Paul},\n        month = may,\n        year = {2019},\n}\n"
 cost: None
 description: Mapping the scientific and patent landscapes for biodiversity based research
   and innovation from Antarctica and the Southern Ocean. Created under the Biospolar
@@ -16,14 +15,15 @@ description: Mapping the scientific and patent landscapes for biodiversity based
 description_of_relationships_to_other_projects: lens.org
 documentation: https://osf.io/py6ve/wiki/home/
 doi: 10.17605/OSF.IO/PY6VE
-last_edit: Thu, 02 Dec 2021 17:15:32 GMT
+last_edit: Mon, 19 Jun 2023 16:42:14 GMT
 location: https://osf.io/py6ve/
 maintained_by: Paul Oldham
+open_access: 'TRUE'
 record_creation_timestamp: 09/10/2021, 08:10:36
 references: Lens
 related_datasets: lens.org
 relationship_description: lens.org
-slug: biospolar
+shortname: biospolar
 tags:
 - antarctic
 - krill
@@ -43,6 +43,7 @@ terms_of_use: 'The datasets are made available under a Creative Commons Attribut
   If using in a publication please cite the two articles described here.'
 title: Biospolar Antarctic Literature and Patents
 uuid: fcf09f34-d5a8-483d-94a3-09a03c167100
+versioning: 'FALSE'
 ---
 
 The Biospolar project aimed to identify research and innovation involving Antarctic biodiversity. As part of the project large datasets were created of the scientific literature and patent data for the Antarctic using the [open access Lens database](https://www.lens.org/). This OSF repository provides public access to those datasets for further research. Data is provided as csv files and larger datasets are zipped using bzip.

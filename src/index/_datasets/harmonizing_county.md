@@ -1,5 +1,4 @@
 ---
-layout: default
 description: This tool creates the csv tables that allow county boundaries to be synchronized
   to a base year, exported to the directory you run this from. While this code takes
   shape files of any type and preforms an intersect, it was written to follow the
@@ -12,7 +11,7 @@ last_edit: 08/13/2021, 08:55:41
 location: https://elisabethperlman.net/code.html
 maintained_by: Bitsy Perlman
 record_creation_timestamp: 08/13/2021, 08:55:41
-slug: harmonising_county_boundaries
+shortname: harmonising_county_boundaries
 title: Tools for Harmonizing County Boundaries
 uuid: 6ba552a7-ec31-4710-9d8b-d8177b293a90
 ---

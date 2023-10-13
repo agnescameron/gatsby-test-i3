@@ -1,20 +1,22 @@
 ---
-layout: default
 bigquery: https://console.cloud.google.com/bigquery?p=patents-public-data&d=patentsview&page=dataset
 citation: Attribution should be given to PatentsView for use, distribution, or derivative
   works.
 code: https://github.com/CSSIP-AIR/PatentsView-Code-Snippets/
-contributors: USPTO
+contributors:
+- USPTO
 cost: None
 description: 'PatentsView includes US patent data including raw data (summaries, applications,
   pregrant applications), disambugations of inventors and assignees, and inventor
   gender estimates.  Also foreign priority data, # of figures and sheets, and government
   interest statements.'
 documentation: https://patentsview.org/query/builder-faqs
-last_edit: 04/13/2022, 12:40:04
+last_edit: Wed, 11 Oct 2023 03:01:59 GMT
 location: https://patentsview.org/
 maintained_by: USPTO
+open_access: 'TRUE'
 record_creation_timestamp: 12/2/2020 17:20:46
+related_publications: http://dx.doi.org/10.2139/ssrn.3868599
 schema_fields:
 - citation_id
 - state_fips
@@ -141,7 +143,7 @@ schema_fields:
 - doctype
 - title
 - level_three
-slug: patentsview
+shortname: patentsview
 tags:
 - disambiguation
 - United States
@@ -150,4 +152,5 @@ terms_of_use: Creative Commons Attribution 4.0 International License.
 timeframe: 1963-1999
 title: USPTO PatentsView
 uuid: cf1780b1-e265-4e49-8d1d-83b9cfe0fd9a
+versioning: 'FALSE'
 ---

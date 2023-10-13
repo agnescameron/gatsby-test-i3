@@ -1,5 +1,4 @@
 ---
-layout: default
 cost: None
 description: The Long-Term Productivity database was created as a project at the Bank
   of France in 2013 by Antonin Bergeaud, Gilbert Cette and Remy Lecat. Following the
@@ -13,11 +12,12 @@ description: The Long-Term Productivity database was created as a project at the
   data corresponding to each of the papers linked to this project are available. This
   includes age of capital stock, education attainment, electricity production per
   capita.
-last_edit: 08/16/2021, 13:46:40
+last_edit: Mon, 19 Jun 2023 16:39:35 GMT
 location: http://longtermproductivity.com/download.html
 maintained_by: Antonin Bergeaud
+open_access: 'TRUE'
 record_creation_timestamp: 08/16/2021, 13:46:40
-slug: long_term_productivity
+shortname: long_term_productivity
 tags:
 - productivity
 - Europe
@@ -27,4 +27,5 @@ terms_of_use: You are free to use the data for non-commercial use.
 timeframe: 1890-2020
 title: Long-Term Productivity database
 uuid: 1f556a96-61fc-4d4c-a046-ed711d9807f9
+versioning: 'FALSE'
 ---

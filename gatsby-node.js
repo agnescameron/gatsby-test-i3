@@ -11,13 +11,14 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Frontmatter {
       title: String!
-      authors: [String]
+      contributors: [String]
       description: String
       tags: [String]
       schema_fields: [String]
       slug: String!
       location: String
       code: String
+      documentation: String
     }
   `
   createTypes(typeDefs)
@@ -130,8 +131,10 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
   for (const node of dataNodes.entries) {
     const {slug} = node.fields
     const title = node.frontmatter.title
-    const description = node.frontmatter.description
+    // const description = node.frontmatter.description
     const tags = Array.isArray(node.frontmatter.tags) ? node.frontmatter.tags.map(tag => tag !== undefined && tag.toLowerCase()) : node.frontmatter.tags
+    const contributors = Array.isArray(node.frontmatter.contributors) ? node.frontmatter.contributors.map(contributor => contributor !== undefined && contributor) : node.frontmatter.contributors
+    // console.log('contributors', node.frontmatter.contributors, contributors, tags)
     // console.log('frontmatter is', node.frontmatter)
     let html = await Promise.all([
       type.getFields().html.resolve(node),
@@ -141,9 +144,12 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
     documents.push({
       slug: node.fields.slug,
       title: node.frontmatter.title,
-      authors: node.frontmatter.authors,
+      contributors: contributors,
       description: node.frontmatter.description,
-      tags: node.frontmatter.tags,
+      location: node.frontmatter.location,
+      tags: tags,
+      code: node.frontmatter.code,
+      documentation: node.frontmatter.documentation,
       content: striptags(html),
     })
     store[slug] = {
@@ -153,7 +159,7 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
   const mainIndex = lunr(function() {
     this.ref(`slug`)
     this.field(`title`)
-    this.field(`authors`)
+    this.field(`contributors`)
     this.field(`description`)
     this.field(`schema_fields`)
     this.field(`content`)
@@ -161,6 +167,7 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
     this.field(`code`)
     for (const doc of documents) {
       this.add(doc)
+      // console.log(doc)
     }
   })
 

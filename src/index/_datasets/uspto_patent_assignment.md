@@ -1,11 +1,19 @@
 ---
-layout: default
 bigquery: https://console.cloud.google.com/bigquery?p=patents-public-data&d=uspto_oce_assignment&page=dataset
 citation: '"USPTO OCE Patent Assignment Data" by the USPTO, for public use. Marco,
   Alan C., Graham, Stuart J.H., Myers, Amanda F., D''Agostino, Paul A and Apple, Kirsten,
   "The USPTO Patent Assignment Dataset: Descriptions and Analysis" (July 27, 2015).'
-contributors: Marco, Alan C., Graham, Stuart J.H., Myers, Amanda F., D'Agostino, Paul
-  A, Apple, Kirsten
+contributors:
+- Marco
+- Alan C.
+- Graham
+- Stuart J.H.
+- Myers
+- Amanda F.
+- D'Agostino
+- Paul A
+- Apple
+- Kirsten
 cost: None
 description: The USPTO allows parties to record assignments of patents and patent
   applications to, as much as possible, maintain a complete history of claimed interests
@@ -16,9 +24,10 @@ description: The USPTO allows parties to record assignments of patents and paten
   on 8.97 million patent assignments and other transactions recorded at the USPTO
   since 1970 and involving roughly 15.1 million patents and patent applications. It
   is derived from the recording of patent transfers by parties with the USPTO.
-last_edit: Fri, 03 Mar 2023 13:41:19 GMT
+last_edit: Thu, 13 Jul 2023 00:33:32 GMT
 location: https://www.uspto.gov/ip-policy/economic-research/research-datasets/patent-assignment-dataset
 maintained_by: EconomicsData@uspto.gov
+open_access: 'FALSE'
 related_publications: http://ssrn.com/abstract=2636461
 schema_fields:
 - reel_no
@@ -62,7 +71,7 @@ schema_fields:
 - publication_number
 - ee_country
 - convey_text
-slug: uspto_patent_assignment
+shortname: uspto_patent_assignment
 tags:
 - patents
 - claims
@@ -81,4 +90,5 @@ terms_of_use: 'USPTO’s online databases are not designed or intended to be a s
 timeframe: 1970-2020
 title: USPTO OCE Patent Assignment Data
 uuid: 7c697eb3-2d99-4b44-87cb-d3c7bb0568e1
+versioning: 'FALSE'
 ---

@@ -1,10 +1,10 @@
 ---
-layout: default
 api_or_bulk_downloads: Bulk
 citation: 'Arts S, Hou J, Gomez JC. (2020). Natural language processing to identify
   the creation and impact of new technologies in patent text: code, data, and new
   measures. Forthcoming Research Policy. (https://doi.org/10.1016/j.respol.2020.104144)'
 code: https://github.com/sam-arts/respol_patents_code
+cost: None
 datasets_and_publications_using_this_dataset: 'Arts S, Hou J, Gomez JC. (2020). Natural
   language processing to identify the creation and impact of new technologies in patent
   text: code, data, and new measures. Forthcoming Research Policy. (https://doi.org/10.1016/j.respol.2020.104144)'
@@ -22,13 +22,17 @@ description: Different open access data files related to the text of USPTO paten
 documentation: https://zenodo.org/record/3515985
 doi: https://doi.org/10.5281/zenodo.3515985
 error_metrics: 'Yes'
-last_edit: Thu, 12 May 2022 16:43:59 GMT
+last_edit: Mon, 19 Jun 2023 16:39:26 GMT
 location: https://zenodo.org/record/3515985
 maintained_by: Sam Arts
+open_access: 'TRUE'
+related_projects:
+  supercedes:
+  - patenttext
 related_publications: 'Arts S, Hou J, Gomez JC. (2020). Natural language processing
   to identify the creation and impact of new technologies in patent text: code, data,
   and new measures. Forthcoming Research Policy. (https://doi.org/10.1016/j.respol.2020.104144)'
-slug: patent_text_new_measures
+shortname: patent_text_new_measures
 superseded_by: Fri, 25 Feb 2022 23:35:52 GMT
 tags:
 - patent measures
@@ -42,5 +46,5 @@ terms_of_use: Open Data Commons Attribution License v1.0
 timeframe: 1969-2018
 title: 'Patent text: code, data, and new measures'
 uuid: 44f33a6f-5099-4481-abed-af9aadf0bd4f
-versioning: 'Yes'
+versioning: 'FALSE'
 ---

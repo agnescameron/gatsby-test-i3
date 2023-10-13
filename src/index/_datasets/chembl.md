@@ -1,12 +1,12 @@
 ---
-layout: default
 bigquery: https://console.cloud.google.com/bigquery?p=patents-public-data&d=ebi_chembl&page=dataset
 citation: '"The ChEMBL database in 2017." Anna Gaulton, Anne Hersey, Michał Nowotka,
   A Patrícia Bento, Jon Chambers, David Mendez, Prudence Mutowo, Francis Atkinson,
   Louisa J Bellis, Elena Cibrián-Uhalte, Mark Davies, Nathan Dedman, Anneli Karlsson,
   María Paula Magariños, John P Overington, George Papadatos, Ines Smit, Andrew R
   Leach Nucleic acids Research (2017) 45 (Database Issue), D945-D954'
-contributors: European Bioinformatics Institute
+contributors:
+- European Bioinformatics Institute
 cost: None
 description: ChEMBL Data is a manually curated database of small molecules used in
   drug discovery, including information about existing patented drugs.
@@ -14,9 +14,10 @@ documentation: 'schema: https://www.ebi.ac.uk/chembl/db_schema
 
 
   '
-last_edit: Wed, 05 Apr 2023 15:40:38 GMT
+last_edit: Mon, 19 Jun 2023 16:42:59 GMT
 location: https://console.cloud.google.com/marketplace/product/google_patents_public_datasets/chembl
 maintained_by: EMBL-EBI, an outstation of European Molecular Biology Laboratory
+open_access: 'TRUE'
 related_projects:
   similar:
   - unichem
@@ -404,7 +405,7 @@ schema_fields:
 - molsyn_id
 - l6
 - ddd_id
-slug: chembl
+shortname: chembl
 tags:
 - biotechnology
 - health
@@ -414,4 +415,5 @@ tags:
 terms_of_use: CC BY-SA 3.0
 title: ChEMBL
 uuid: e232a192-965c-4ec9-904c-155b6dfe56c5
+versioning: 'FALSE'
 ---

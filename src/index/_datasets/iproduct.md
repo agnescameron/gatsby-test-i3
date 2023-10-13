@@ -1,6 +1,6 @@
 ---
-layout: default
-contributors: Gaétan de Rassenfosse
+contributors:
+- Gaétan de Rassenfosse
 cost: None
 description: 'The IPRoduct project seeks to link innovative goods to the patents upon
   which they are based. By directly linking products to patents, this project tracks
@@ -19,11 +19,12 @@ description: 'The IPRoduct project seeks to link innovative goods to the patents
 
   '
 documentation: https://iproduct.io/app/#/public/page/about
-last_edit: Fri, 08 Jul 2022 08:15:20 GMT
+last_edit: Mon, 19 Jun 2023 16:35:05 GMT
 location: https://iproduct.io/app
 maintained_by: Gaétan de Rassenfosse, Samuel Arnod-Prin
+open_access: 'FALSE'
 record_creation_timestamp: 12/4/2020 17:20:46
-slug: iproduct
+shortname: iproduct
 tags:
 - Products
 - disambiguation
@@ -33,4 +34,5 @@ terms_of_use: These data are currently not available for sale. They are availabl
   in exchange of credits, which you earn by contributing to the project.
 title: IPRoduct
 uuid: 303ce18b-f411-4752-9fe6-d4fcc369f43c
+versioning: 'FALSE'
 ---

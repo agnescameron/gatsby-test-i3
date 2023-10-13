@@ -1,8 +1,8 @@
 ---
-layout: default
-contributors: This project is supported by the U.S. Department of Transportation through
-  an inter-agency agreement with the National Science Foundation, which has extended
-  a grant to the NBER.
+contributors:
+- This project is supported by the U.S. Department of Transportation through an inter-agency
+  agreement with the National Science Foundation
+- which has extended a grant to the NBER.
 cost: None
 description: 'Improving access to data sets related to transportation economics and
   facilitating research with these datasets are cental objectives of this project.
@@ -16,10 +16,11 @@ description: 'Improving access to data sets related to transportation economics 
   categories below. The DOT data span a wide range of transportation modes and include
   information about the transportation infrastructure, the delivery of transportation
   services, and the demand for these services. '
-last_edit: Sat, 30 Jul 2022 16:44:52 GMT
+last_edit: Mon, 19 Jun 2023 16:46:15 GMT
 location: https://www.nber.org/research/data/transportation-economics-21st-century-data-resources
 maintained_by: Caitlin Gorback, gorback@nber.org
-slug: transportation_economics
+open_access: 'TRUE'
+shortname: transportation_economics
 tags:
 - geography
 - transportation
@@ -28,4 +29,5 @@ tags:
 - infrastructure
 title: Transportation Economics in the 21st Century
 uuid: 95ed0b8b-1d47-4386-9ff1-6b09028323ef
+versioning: 'FALSE'
 ---
