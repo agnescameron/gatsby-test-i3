@@ -131,7 +131,7 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
     const {slug} = node.fields
     const title = node.frontmatter.title
     const description = node.frontmatter.description
-    const tags = node.frontmatter.tags
+    const tags = Array.isArray(node.frontmatter.tags) ? node.frontmatter.tags.map(tag => tag !== undefined && tag.toLowerCase()) : node.frontmatter.tags
     // console.log('frontmatter is', node.frontmatter)
     let html = await Promise.all([
       type.getFields().html.resolve(node),

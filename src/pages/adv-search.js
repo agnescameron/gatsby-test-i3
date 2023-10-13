@@ -114,7 +114,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
         if(filter.modifier === "AND") modifier = '+';
         else if(filter.modifier === "NOT") modifier = '-';
         else if(filter.modifier === "OR") modifier = '';
-        searchString += filter.field === 'any' ? modifier + filter.fieldString + " " : modifier + filter.field + ":" + filter.fieldString + " ";
+        searchString += filter.field === 'any' ? modifier + filter.fieldString.replace(/(?=[() ])/g, '\\') + " " : modifier + filter.field + ":" + filter.fieldString.replace(/(?=[() ])/g, '\\') + " ";
       }
     })
 
@@ -127,6 +127,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
     const index = currentForm.index === 'datasets' ? mainIndex : toolsIndex
     // const docs = currentForm.index === 'datasets' ? props.datasets : props.tools
 
+    console.log('search string is', searchString)
 
     let res = []
     try {
