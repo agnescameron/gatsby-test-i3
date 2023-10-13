@@ -110,9 +110,10 @@ const AdvSearch = ({ initialQuery = "" }) => {
     filters.forEach( filter => {
       console.log('filter', filter)
       if(filter.fieldString !== ""){
-        let modifier = '';
+        let modifier = '+';
         if(filter.modifier === "AND") modifier = '+';
         else if(filter.modifier === "NOT") modifier = '-';
+        else if(filter.modifier === "OR") modifier = '';
         searchString += filter.field === 'any' ? modifier + filter.fieldString + " " : modifier + filter.field + ":" + filter.fieldString + " ";
       }
     })
