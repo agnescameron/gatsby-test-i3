@@ -2,6 +2,7 @@ import { graphql, Link } from "gatsby"
 import * as React from 'react'
 import SearchForm from "./search-form";
 import AdvSearch from "./adv-search";
+import "./index.css"
 
 const IndexPage = () => {
 
