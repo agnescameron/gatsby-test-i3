@@ -107,34 +107,33 @@ const AdvSearch = ({ initialQuery = "" }) => {
     // const q = e.target.value
     event.preventDefault();
     let searchString='';
+    let orQuery = false; // bit inelegant; need to know if and-ing or or-ing the first field
     filters.forEach( filter => {
       console.log('filter', filter)
       if(filter.fieldString !== ""){
-        let modifier = '+';
+        let modifier = '';
         const fieldString = filter.fieldString.replace(/(?=[() ])/g, '\\')
         if(filter.modifier === "AND") modifier = '+';
         else if(filter.modifier === "NOT") modifier = '-';
-        else if(filter.modifier === "OR") modifier = '';
+        else if(filter.modifier === "OR") orQuery = true;
         searchString += filter.field === 'any' ? modifier + fieldString + " " : modifier + filter.field + ":" + fieldString + " ";
       }
     })
 
-    // let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
-    // setQuery(event.target.value)
+    //if it's not an OR type query, require first field
+    searchString = orQuery ? searchString : '+' + searchString
+
     Object.keys(currentForm).forEach(key => {
       if (currentForm[key] === true) searchString += '+' + key + ":* ";
     })
 
     const index = currentForm.index === 'datasets' ? mainIndex : toolsIndex
-    // const docs = currentForm.index === 'datasets' ? props.datasets : props.tools
 
     console.log('search string is', searchString)
 
     let res = []
     try {
-      // Search is a lunr method
       res = index.search(searchString).map(({ ref }) => {
-        // Map search results to an array of {slug, title, excerpt} objects
         return {
           slug: ref,
           ...store[ref],
