@@ -1,4 +1,3 @@
-/* src/components/search-form.js */
 import React, { useState, useRef } from "react"
 import { navigate } from "gatsby"
 import { Link, graphql, useStaticQuery } from "gatsby"
