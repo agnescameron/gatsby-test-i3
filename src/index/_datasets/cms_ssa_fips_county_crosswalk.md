@@ -9,7 +9,7 @@ description: 'CMS periodically produces SSA to FIPS CBSA to county crosswalk fil
 last_edit: Mon, 19 Jun 2023 16:46:38 GMT
 location: https://data.nber.org/data/cbsa-msa-fips-ssa-county-crosswalk.html
 open_access: 'TRUE'
-shortname: cms_ssa_fips_county_crosswalk
+slug: cms_ssa_fips_county_crosswalk
 tags:
 - geography
 - crosswalk

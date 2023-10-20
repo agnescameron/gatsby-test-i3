@@ -20,7 +20,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Contact maintainer through Dataverse
 open_access: 'TRUE'
 record_creation_timestamp: 08/17/2021, 08:40:25
-shortname: classifying_patents_semantic_content
+slug: classifying_patents_semantic_content
 tags:
 - United States
 - patents

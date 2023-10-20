@@ -11,7 +11,7 @@ location: https://www.bea.gov/data
 maintained_by: Bureau of Economic Analysis
 open_access: 'TRUE'
 related_publications: https://www.ucl.ac.uk/bartlett/public-purpose/wp2023-02
-shortname: bea
+slug: bea
 tags:
 - us
 - gdp

@@ -19,7 +19,7 @@ location: https://patents.darden.virginia.edu/
 maintained_by: GCPD@darden.virginia.edu
 open_access: 'TRUE'
 record_creation_timestamp: 11/13/2020 17:47:00
-shortname: uva_global_corporate_patents
+slug: uva_global_corporate_patents
 tags:
 - United States
 - disambiguation

@@ -24,7 +24,7 @@ last_edit: Mon, 19 Jun 2023 16:48:01 GMT
 location: https://fdz.iab.de/en/our-data-products/individual-and-household-data/inv-bio-adiab/
 maintained_by: IAB FDZ
 open_access: 'TRUE'
-shortname: inv_bio
+slug: inv_bio
 tags:
 - patents
 - biography

@@ -29,7 +29,7 @@ location: https://huggingface.co/datasets/big_patent
 maintained_by: Lu Wang, wangluxy@umich.edu
 open_access: 'TRUE'
 related_publications: https://arxiv.org/pdf/1906.03741.pdf
-shortname: bigpatent
+slug: bigpatent
 tags:
 - patents
 - summarization

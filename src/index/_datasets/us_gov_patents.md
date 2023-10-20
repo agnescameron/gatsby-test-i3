@@ -22,7 +22,7 @@ location: https://zenodo.org/record/3369582
 maintained_by: Gaétan de Rassenfosse
 open_access: 'TRUE'
 record_creation_timestamp: 11/26/2020 17:20:46
-shortname: us_gov_patents
+slug: us_gov_patents
 tags:
 - research funding
 - United States

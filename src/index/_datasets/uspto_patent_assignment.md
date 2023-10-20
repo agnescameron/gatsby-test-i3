@@ -71,7 +71,7 @@ schema_fields:
 - publication_number
 - ee_country
 - convey_text
-shortname: uspto_patent_assignment
+slug: uspto_patent_assignment
 tags:
 - patents
 - claims

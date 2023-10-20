@@ -16,7 +16,7 @@ location: https://sites.google.com/site/patentdataproject/Home/downloads?authuse
 maintained_by: Adam Jaffe
 open_access: 'TRUE'
 record_creation_timestamp: 12/1/2020 17:20:46
-shortname: nber_citation
+slug: nber_citation
 tags:
 - United States
 terms_of_use: 'The data in these files are freely available to members of this community.

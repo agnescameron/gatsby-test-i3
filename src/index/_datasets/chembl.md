@@ -405,7 +405,7 @@ schema_fields:
 - molsyn_id
 - l6
 - ddd_id
-shortname: chembl
+slug: chembl
 tags:
 - biotechnology
 - health

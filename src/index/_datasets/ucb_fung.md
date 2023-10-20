@@ -82,7 +82,7 @@ schema_fields:
 - Sequence
 - State
 - CountryCodeOrNPL_cited
-shortname: ucb_fung
+slug: ucb_fung
 tags:
 - patents
 - machine learning

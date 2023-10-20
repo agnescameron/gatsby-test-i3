@@ -7,7 +7,7 @@ last_edit: Mon, 19 Jun 2023 16:35:30 GMT
 location: https://www.epo.org/searching-for-patents/data/bulk-data-sets/docdb.html#tab-1
 maintained_by: EPO
 open_access: 'FALSE'
-shortname: docdb
+slug: docdb
 tags:
 - patents
 - bibliographic data

@@ -11,7 +11,7 @@ last_edit: Mon, 19 Jun 2023 17:03:53 GMT
 location: https://github.com/mattmarx/jcif
 open_access: 'TRUE'
 related_publications: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3006859
-shortname: jcif
+slug: jcif
 terms_of_use: 'Michael Bikard and Matt Marx introduced JCIF in the paper "From Academia
   to Industry: Hubs as Bridges between University Science and Corporate Technologies",
   available at https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3006859. We would

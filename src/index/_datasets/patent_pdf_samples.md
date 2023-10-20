@@ -48,7 +48,7 @@ schema_fields:
 - x_relative_max
 - y_relative_max
 - class_international
-shortname: patent_pdf_samples
+slug: patent_pdf_samples
 tags:
 - machine learning
 - OCR

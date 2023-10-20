@@ -16,7 +16,7 @@ location: https://www.iip.or.jp/e/patentdb/index.html
 maintained_by: Foundation for Intellectual Property, iip-patentdb@fdn-ip.or.jp
 open_access: 'FALSE'
 record_creation_timestamp: 11/15/2020 17:20:46
-shortname: japanese_patent_office
+slug: japanese_patent_office
 tags:
 - Japan
 - patents

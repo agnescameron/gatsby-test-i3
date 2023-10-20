@@ -19,7 +19,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Contact maintainer through Dataverse
 open_access: 'TRUE'
 record_creation_timestamp: 11/21/2020 17:20:46
-shortname: co_authorship_careers
+slug: co_authorship_careers
 tags:
 - coauthor network
 - United States

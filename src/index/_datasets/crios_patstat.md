@@ -25,7 +25,7 @@ location: https://www.icrios.unibocconi.eu/wps/wcm/connect/Cdr/Icrios/Home/Resou
 maintained_by: crios@unibocconi.it
 open_access: 'TRUE'
 record_creation_timestamp: 11/30/2020 17:20:46
-shortname: crios_patstat
+slug: crios_patstat
 tags:
 - disambiguation
 - Europe

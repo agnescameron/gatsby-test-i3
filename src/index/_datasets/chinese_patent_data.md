@@ -20,7 +20,7 @@ open_access: 'TRUE'
 record_creation_timestamp: 11/14/2020 17:20:46
 record_superceded_by: sipo_matching
 related_publications: https://www.nature.com/articles/sdata201842
-shortname: chinese_patent_data
+slug: chinese_patent_data
 tags:
 - disambiguation
 - China

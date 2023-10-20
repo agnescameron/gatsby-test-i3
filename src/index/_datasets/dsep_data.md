@@ -47,7 +47,7 @@ schema_fields:
 - licensing_commitment
 - disclosure_event
 - standard
-shortname: dsep_data
+slug: dsep_data
 tags:
 - disclosure
 - standards

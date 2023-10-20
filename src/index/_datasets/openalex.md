@@ -14,7 +14,7 @@ last_edit: Mon, 19 Jun 2023 16:45:47 GMT
 location: https://docs.openalex.org/download-snapshot
 maintained_by: info@ourresearch.org
 open_access: 'TRUE'
-shortname: openalex
+slug: openalex
 size: 200Gb
 tags:
 - citation

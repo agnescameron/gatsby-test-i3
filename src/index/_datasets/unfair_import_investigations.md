@@ -61,7 +61,7 @@ schema_fields:
 - teoReliefGranted
 - complainant
 - targetDate
-shortname: unfair_import_investigations
+slug: unfair_import_investigations
 tags:
 - import
 - legal

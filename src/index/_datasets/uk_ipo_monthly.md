@@ -8,7 +8,7 @@ location: https://www.gov.uk/government/collections/patents-trade-marks-and-desi
 maintained_by: UK Intellectual Property Office, https://www.gov.uk/government/organisations/intellectual-property-office
 open_access: 'TRUE'
 record_creation_timestamp: 09/02/2021, 10:13:39
-shortname: uk_ipo_monthly
+slug: uk_ipo_monthly
 tags:
 - Trademarks
 - United Kingdom

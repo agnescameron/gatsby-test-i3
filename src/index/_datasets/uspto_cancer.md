@@ -20,7 +20,7 @@ location: https://www.uspto.gov/ip-policy/economic-research/research-datasets/ca
 maintained_by: economicsData@uspto.gov
 open_access: 'TRUE'
 schema_fields: '[]'
-shortname: uspto_cancer
+slug: uspto_cancer
 tags:
 - health
 - cancer

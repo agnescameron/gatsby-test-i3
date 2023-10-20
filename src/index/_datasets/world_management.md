@@ -1,17 +1,13 @@
 ---
 citation: Bloom, Nicholas; Lemos, Renata; Sadun, Raffaella; Scur, Daniela; Van Reenen,
   John, 2021, "World Management Survey - Manufacturing", https://doi.org/10.7910/DVN/OY6CBK,
-  Harvard Dataverse, V1, UNF:6:k5xYE9W6U534XDiWu3RjrA== [fileUNF]
-<<<<<<< HEAD
+  Harvard Dataverse, V1, UNF:6:k5xYE9W6U534XDiWu3RjrA==
 contributors:
 - Nick Bloom
 - Renata Lemos
 - Raffaella Sadun
 - Daniela Scur
 - John Van Reenen
-=======
-contributors: Nick Bloom, Renata Lemos, Raffaella Sadun, Daniela Scur, John Van Reenen
->>>>>>> ac07ae05ba8085c4cb88787a61b4bfa19a2a9ea7
 cost: none
 description: 'The World Management Survey is the first cross-country, cross-industry
   dataset built to measure the quality of management practices in establishments.
@@ -30,7 +26,7 @@ last_edit: Thu, 27 Jul 2023 08:58:28 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OY6CBK
 maintained_by: thomaz@worldmanagementsurvey.org
 open_access: 'TRUE'
-shortname: world_management
+slug: world_management
 tags:
 - management
 terms_of_use: CC0 1.0

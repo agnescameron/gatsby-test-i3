@@ -15,7 +15,7 @@ related_projects:
   similar:
   - surechembl
   - chembl
-shortname: chembl_ntd
+slug: chembl_ntd
 tags:
 - biotechnology
 - health

@@ -14,7 +14,7 @@ last_edit: Mon, 19 Jun 2023 16:46:30 GMT
 location: https://www.nber.org/research/data/block-distance-database
 maintained_by: data@nber.org
 open_access: 'TRUE'
-shortname: census_block_distance
+slug: census_block_distance
 tags:
 - population
 - geography

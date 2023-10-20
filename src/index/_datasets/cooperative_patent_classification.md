@@ -52,7 +52,7 @@ schema_fields:
 - limiting_references
 - precedenceLimitingReferences
 - informative_references
-shortname: cooperative_patent_classification
+slug: cooperative_patent_classification
 tags:
 - patents
 - science

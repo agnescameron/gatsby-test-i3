@@ -17,7 +17,7 @@ location: https://www.rug.nl/ggdc/productivity/pwt/?lang=en
 maintained_by: Contact pwt@rug.nl
 open_access: 'TRUE'
 record_creation_timestamp: 11/22/2020 17:20:46
-shortname: pwt
+slug: pwt
 tags:
 - geography
 - GDP

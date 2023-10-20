@@ -12,7 +12,7 @@ record_creation_timestamp: 11/18/2020 17:20:46
 related_project_shortnames: lens
 relationships:
 - lens
-shortname: mit_scholarly_citations
+slug: mit_scholarly_citations
 tags:
 - citation
 - scholarly literature

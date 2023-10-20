@@ -6,7 +6,7 @@ location: https://www.lens.org/lens/labs/datafacilities
 maintained_by: Lens.org (Cambia)
 open_access: 'FALSE'
 record_creation_timestamp: 11/28/2020
-shortname: lens_labs
+slug: lens_labs
 tags:
 - Global
 - citation

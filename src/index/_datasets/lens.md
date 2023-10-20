@@ -14,7 +14,7 @@ location: https://lens.org/
 maintained_by: "Cambia Foundation, \nhttps://about.lens.org/contact-us/"
 open_access: 'FALSE'
 record_creation_timestamp: 11/28/2020 17:20:46
-shortname: lens
+slug: lens
 tags:
 - citation
 - scholarly literature

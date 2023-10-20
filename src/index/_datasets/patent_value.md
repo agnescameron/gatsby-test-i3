@@ -9,7 +9,7 @@ last_edit: Mon, 19 Jun 2023 16:35:13 GMT
 location: https://iu.box.com/patents
 maintained_by: Noah Stoffman, nstoffma@iu.edu
 open_access: 'FALSE'
-shortname: patent_value
+slug: patent_value
 tags:
 - scientific value
 - economic growth

@@ -13,7 +13,7 @@ maintained_by: Contact maintainer through Dataverse
 open_access: 'TRUE'
 record_creation_timestamp: 08/17/2021, 09:11:41
 related_publications: https://academic.oup.com/restud/article/86/1/1/5026613
-shortname: us_university_patents
+slug: us_university_patents
 tags:
 - inequality
 - geography

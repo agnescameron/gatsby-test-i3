@@ -17,7 +17,7 @@ location: http://longtermproductivity.com/download.html
 maintained_by: Antonin Bergeaud
 open_access: 'TRUE'
 record_creation_timestamp: 08/16/2021, 13:46:40
-shortname: long_term_productivity
+slug: long_term_productivity
 tags:
 - productivity
 - Europe

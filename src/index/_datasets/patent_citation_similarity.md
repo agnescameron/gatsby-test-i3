@@ -23,7 +23,7 @@ maintained_by: Jeff Kuhn
 open_access: 'TRUE'
 record_creation_timestamp: 11/14/2020 17:47:00
 related_publications: https://ssrn.com/abstract=2714954
-shortname: patent_citation_similarity
+slug: patent_citation_similarity
 tags:
 - similarity
 - citation

@@ -205,7 +205,7 @@ schema_fields:
 - resulting_publication_ids
 - grant_number
 - research_org_cities
-shortname: dimensions
+slug: dimensions
 tags:
 - scholarly literature
 - patents

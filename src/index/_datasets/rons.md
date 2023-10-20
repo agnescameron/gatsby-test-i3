@@ -30,7 +30,7 @@ related_projects:
 relationships:
 - patcit
 - lens
-shortname: rons
+slug: rons
 tags:
 - citation
 - scholarly literature

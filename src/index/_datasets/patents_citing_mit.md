@@ -10,7 +10,7 @@ location: https://www.lens.org/lens/search/patent/list?collectionId=22790&p=0&n=
 maintained_by: The Lens
 open_access: 'FALSE'
 record_creation_timestamp: 11/19/2020 17:20:46
-shortname: patents_citing_mit
+slug: patents_citing_mit
 tags:
 - citation
 - scholarly literature

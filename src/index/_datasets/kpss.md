@@ -31,7 +31,7 @@ maintained_by: 'Please contact Dimitris Papanikolaou (d-papanikolaou@kellogg.nor
   '
 open_access: 'TRUE'
 related_publications: https://academic.oup.com/qje/article-abstract/132/2/665/3076284?redirectedFrom=fulltext&login=false
-shortname: kpss
+slug: kpss
 tags:
 - metrics
 - market

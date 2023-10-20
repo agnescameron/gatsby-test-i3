@@ -17,7 +17,7 @@ schema_fields:
 - PublicationNumber
 - StandardBody
 - TechnicalStandard
-shortname: technical_standards_etsi
+slug: technical_standards_etsi
 tags:
 - standards
 - technology

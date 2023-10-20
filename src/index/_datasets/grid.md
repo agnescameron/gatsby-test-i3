@@ -19,7 +19,7 @@ location: https://www.grid.ac/
 maintained_by: contact@grid.ac, Digital Science
 open_access: 'FALSE'
 schema_fields: '[]'
-shortname: grid
+slug: grid
 tags:
 - disambiguation
 - geography

@@ -14,7 +14,7 @@ last_edit: Mon, 19 Jun 2023 17:04:25 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZJCDCE
 maintained_by: Francis Lafond
 open_access: 'TRUE'
-shortname: long-run
+slug: long-run
 tags:
 - patents
 - classification systems

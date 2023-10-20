@@ -11,7 +11,7 @@ last_edit: Mon, 19 Jun 2023 16:48:23 GMT
 location: https://www.eurekalert.org
 maintained_by: American Academy for the Advancement of Science
 open_access: 'FALSE'
-shortname: eurekalert
+slug: eurekalert
 tags:
 - media mentions
 title: EurekAlert

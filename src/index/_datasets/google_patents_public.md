@@ -55,7 +55,7 @@ schema_fields:
 - priority_date
 - description_localized
 - inventor
-shortname: google_patents_public
+slug: google_patents_public
 superseded_by: Fri, 25 Feb 2022 23:34:33 GMT
 tags:
 - Google Patents

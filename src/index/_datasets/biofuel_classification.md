@@ -21,7 +21,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Jeff Kessler
 open_access: 'TRUE'
 related_publications: https://www.sciencedirect.com/science/article/abs/pii/S0301421516304451
-shortname: biofuel_classification
+slug: biofuel_classification
 tags:
 - biofuel
 - patents

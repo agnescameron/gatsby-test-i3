@@ -23,7 +23,7 @@ last_edit: Thu, 27 Jul 2023 08:24:20 GMT
 location: http://www.ifs.tuwien.ac.at/~clef-ip/index.html
 maintained_by: TU Wien
 open_access: 'TRUE'
-shortname: clef_ip
+slug: clef_ip
 tags:
 - validation
 - information retrieval

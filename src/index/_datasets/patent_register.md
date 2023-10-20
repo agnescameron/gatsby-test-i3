@@ -8,7 +8,7 @@ location: https://www.wipo.int/patent_register_portal/en/index.html
 maintained_by: WIPO
 open_access: 'TRUE'
 record_creation_timestamp: 10/13/2021
-shortname: patent_register
+slug: patent_register
 tags:
 - geography
 - index

@@ -37,7 +37,7 @@ open_access: 'TRUE'
 related_projects:
   child:
   - orangebook_fda
-shortname: orangebook_nber
+slug: orangebook_nber
 tags:
 - drugs
 - pharmaceuticals

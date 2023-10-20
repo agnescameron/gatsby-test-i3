@@ -13,7 +13,7 @@ maintained_by: crios@unibocconi.it
 open_access: 'TRUE'
 record_creation_timestamp: 10/21 13:35
 related_publications: https://global.oup.com/academic/product/the-performance-of-european-business-in-the-twentieth-century-9780198749776?cc=it&lang=en&
-shortname: european_business_performance
+slug: european_business_performance
 tags:
 - Europe
 - GDP

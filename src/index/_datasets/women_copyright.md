@@ -20,7 +20,7 @@ last_edit: Thu, 27 Jul 2023 08:25:56 GMT
 location: https://www.copyright.gov/policy/women-in-copyright-system/
 open_access: 'TRUE'
 related_publications: https://www.copyright.gov/policy/women-in-copyright-system/Women-in-the-Copyright-System.pdf
-shortname: women_copyright
+slug: women_copyright
 tags:
 - copyright
 - gender

@@ -143,7 +143,7 @@ schema_fields:
 - doctype
 - title
 - level_three
-shortname: patentsview
+slug: patentsview
 tags:
 - disambiguation
 - United States

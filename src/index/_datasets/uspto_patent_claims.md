@@ -50,7 +50,7 @@ schema_fields:
 - publication_number
 - pat_wrd_avg
 - pub_dep_wrd_min
-shortname: uspto_patent_claims
+slug: uspto_patent_claims
 tags:
 - financial services
 - scope

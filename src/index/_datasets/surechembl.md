@@ -51,7 +51,7 @@ schema_fields:
 - publication_date
 - field
 - field_frequency
-shortname: surechembl
+slug: surechembl
 tags:
 - biotechnology
 - health

@@ -15,7 +15,7 @@ last_edit: Thu, 29 Jun 2023 09:31:53 GMT
 location: https://huggingface.co/ProsusAI/finbert
 open_access: 'TRUE'
 related_publications: https://arxiv.org/abs/1908.10063
-shortname: finbert
+slug: finbert
 tags:
 - financial
 - sentiment

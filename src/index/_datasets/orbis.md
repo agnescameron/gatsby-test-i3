@@ -7,7 +7,7 @@ last_edit: Mon, 19 Jun 2023 16:35:48 GMT
 location: https://www.bvdinfo.com/en-gb/our-products/data/international/orbis-intellectual-property
 maintained_by: Bureau van Dijk
 open_access: 'FALSE'
-shortname: orbis
+slug: orbis
 tags:
 - IP
 - patents

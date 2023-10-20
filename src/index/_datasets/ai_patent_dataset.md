@@ -23,7 +23,7 @@ maintained_by: EconomicsData@uspto.gov
 open_access: 'TRUE'
 related_publications: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3866793,
   https://www.uspto.gov/sites/default/files/documents/OCE-DH-AI.pdf
-shortname: ai_patent_dataset
+slug: ai_patent_dataset
 tags:
 - AI
 - validation

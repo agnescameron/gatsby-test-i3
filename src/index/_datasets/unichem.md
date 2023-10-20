@@ -14,7 +14,7 @@ documentation: https://chembl.gitbook.io/unichem/unichem-2.0/unichem-2.0-beta
 last_edit: Mon, 19 Jun 2023 16:35:37 GMT
 location: https://www.ebi.ac.uk/unichem/beta/
 open_access: 'FALSE'
-shortname: unichem
+slug: unichem
 tags:
 - biotechnology
 - health

@@ -15,7 +15,7 @@ related_projects:
   superceded by:
   - patent_text_new_measures
 related_publications: https://onlinelibrary.wiley.com/doi/epdf/10.1002/smj.2699
-shortname: patenttext
+slug: patenttext
 tags:
 - patent
 - keywords

@@ -20,7 +20,7 @@ location: https://storage.googleapis.com/jmk_public/Younge-Kuhn_Patent_Families_
 maintained_by: Jeff Kuhn
 open_access: 'TRUE'
 related_publications: https://ssrn.com/abstract=2709238
-shortname: patent_families
+slug: patent_families
 tags:
 - patent family
 - similarity

@@ -8,7 +8,7 @@ location: https://patentsview.org/download/data-download-tables
 maintained_by: USPTO
 open_access: 'TRUE'
 record_creation_timestamp: 10/26/2021
-shortname: patentsview_citations
+slug: patentsview_citations
 tags:
 - United States
 - citation

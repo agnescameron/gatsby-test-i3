@@ -21,7 +21,7 @@ maintained_by: Sergio Petralia (contact maintainer through Dataverse)
 open_access: 'TRUE'
 record_creation_timestamp: 08/17/2021, 11:25:28
 related_publications: https://ideas.repec.org/p/egu/wpaper/2027.html
-shortname: gpt_indicators
+slug: gpt_indicators
 tags:
 - growth
 - Use Complementarity

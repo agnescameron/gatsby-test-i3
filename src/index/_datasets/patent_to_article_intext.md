@@ -11,7 +11,7 @@ last_edit: Mon, 19 Jun 2023 16:38:44 GMT
 location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZEZWBX
 maintained_by: Kevin Bryan, http://www.kevinbryanecon.com/
 open_access: 'TRUE'
-shortname: patent_to_article_intext
+slug: patent_to_article_intext
 tags:
 - in-text
 - scholarly literature

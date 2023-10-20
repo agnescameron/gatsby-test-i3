@@ -11,7 +11,7 @@ last_edit: 08/13/2021, 08:55:41
 location: https://elisabethperlman.net/code.html
 maintained_by: Bitsy Perlman
 record_creation_timestamp: 08/13/2021, 08:55:41
-shortname: harmonising_county_boundaries
+slug: harmonising_county_boundaries
 title: Tools for Harmonizing County Boundaries
 uuid: 6ba552a7-ec31-4710-9d8b-d8177b293a90
 ---

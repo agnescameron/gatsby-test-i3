@@ -8,7 +8,7 @@ location: http://www.cepii.fr/CEPII/en/bdd_modele/presentation.asp?id=37
 maintained_by: Pierre Cotterlaz, baci@cepii.fr
 open_access: 'TRUE'
 record_creation_timestamp: 08/24/2021, 15:32:40
-shortname: baci
+slug: baci
 tags:
 - trade
 - global

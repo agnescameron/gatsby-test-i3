@@ -20,7 +20,7 @@ location: https://www.kaggle.com/datasets/google/google-patent-phrase-similarity
 maintained_by: Grigor Aslanyan
 open_access: 'TRUE'
 related_publications: https://arxiv.org/abs/2208.01171
-shortname: phrase_similarity
+slug: phrase_similarity
 tags:
 - phrases
 - similarity

@@ -98,7 +98,7 @@ schema_fields:
 - abstract
 - reference_doi
 - citation
-shortname: patcit
+slug: patcit
 tags:
 - citation
 - scholarly literature

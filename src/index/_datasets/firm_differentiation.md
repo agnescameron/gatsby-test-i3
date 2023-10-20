@@ -27,7 +27,7 @@ location: https://zenodo.org/record/5172146
 open_access: 'TRUE'
 related_publications: Arts S, Cassiman B, Hou J. (2023). Position and Differentiation
   of Firms in Technology Space. Forthcoming Management Science. https://doi.org/10.1287/mnsc.2023.00282
-shortname: firm_differentiation
+slug: firm_differentiation
 tags:
 - differentiation
 - semantic analysis

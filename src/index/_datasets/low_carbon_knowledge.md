@@ -23,7 +23,7 @@ location: https://doi.org/10.4119/unibi/2950291
 open_access: 'TRUE'
 record_creation_timestamp: 6/13/2021 20:55:50
 related_publications: https://www.sciencedirect.com/science/article/abs/pii/S0172219011001979?via%3Dihub
-shortname: low_carbon_knowledge
+slug: low_carbon_knowledge
 tags:
 - citation
 - scholarly literature

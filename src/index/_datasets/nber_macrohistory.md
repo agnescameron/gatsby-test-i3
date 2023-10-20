@@ -26,7 +26,7 @@ open_access: 'TRUE'
 related_publications: Improving the Accessibility of the NBER's Historical Data, by
   Daniel Feenberg and Jeff Miron (NBER Working Paper 5186). Published in the Journal
   of Business and Economic Statistics, Volume 15 Number 3 (July 1997) pages 293-299.
-shortname: nber_macrohistory
+slug: nber_macrohistory
 title: NBER Macrohistory Database
 uuid: 9b37a63b-4bfd-43e9-815e-3fd84cd29301
 versioning: 'FALSE'

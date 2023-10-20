@@ -39,7 +39,7 @@ record_creation_timestamp: 09/07/2021, 16:35:04
 references: null
 related_publications: 'https://doi.org/10.3390/epidemiologia2030024, http://doi.org/10.2196/25108,
   http://doi.org/10.1002/isaf.1482 '
-shortname: covid_twitter_chatter
+slug: covid_twitter_chatter
 tags:
 - social media
 - twitter

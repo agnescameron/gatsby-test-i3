@@ -31,7 +31,7 @@ schema_fields:
 - ProsecutionStatus
 - publication_number
 - InventorName
-shortname: ptab
+slug: ptab
 tags:
 - legal
 - trials

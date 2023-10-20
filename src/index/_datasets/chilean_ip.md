@@ -21,7 +21,7 @@ location: https://eml.berkeley.edu//~bhhall/Chile_ipdata.html
 maintained_by: Bronwyn Hall
 open_access: 'TRUE'
 record_creation_timestamp: 11/13/2020 17:20:46
-shortname: chilean_ip
+slug: chilean_ip
 tags:
 - Chile
 - trademark squatting

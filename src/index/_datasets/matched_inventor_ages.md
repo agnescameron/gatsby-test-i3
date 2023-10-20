@@ -20,7 +20,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Mary Kaltenberg
 open_access: 'TRUE'
 record_creation_timestamp: 08/12/2021, 15:17:03
-shortname: matched_inventor_ages
+slug: matched_inventor_ages
 tags:
 - Inventors
 - Ages

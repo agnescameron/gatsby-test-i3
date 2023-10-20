@@ -22,7 +22,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Contact maintainer through Dataverse
 open_access: 'TRUE'
 record_creation_timestamp: 12/05/2020 17:20:46
-shortname: gov_research_fuels_innovation
+slug: gov_research_fuels_innovation
 tags:
 - research funding
 - United States

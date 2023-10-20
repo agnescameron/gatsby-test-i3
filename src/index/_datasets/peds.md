@@ -16,7 +16,7 @@ location: https://ped.uspto.gov/peds/#!/
 maintained_by: USPTO
 open_access: 'FALSE'
 record_creation_timestamp: 08/28/2021, 16:51:00
-shortname: peds
+slug: peds
 tags:
 - patents
 terms_of_use: 'terms given here: https://www.uspto.gov/sites/default/files/documents/Patent%20Electronic%20System%20Access%20Document_0.pdf'

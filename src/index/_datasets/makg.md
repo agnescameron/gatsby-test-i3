@@ -18,7 +18,7 @@ last_edit: Mon, 19 Jun 2023 16:38:15 GMT
 location: http://ma-graph.org/
 open_access: 'TRUE'
 record_creation_timestamp: 12/3/2020 17:20:46
-shortname: makg
+slug: makg
 tags:
 - citation
 - scholarly literature

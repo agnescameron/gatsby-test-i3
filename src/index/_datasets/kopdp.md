@@ -25,7 +25,7 @@ location: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/D
 maintained_by: Jihong Lee
 open_access: 'TRUE'
 related_publications: https://dx.doi.org/10.2139/ssrn.3404698
-shortname: kopdp
+slug: kopdp
 tags:
 - korea
 - patent

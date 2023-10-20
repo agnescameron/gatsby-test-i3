@@ -24,7 +24,7 @@ location: https://iproduct.io/app
 maintained_by: Gaétan de Rassenfosse, Samuel Arnod-Prin
 open_access: 'FALSE'
 record_creation_timestamp: 12/4/2020 17:20:46
-shortname: iproduct
+slug: iproduct
 tags:
 - Products
 - disambiguation

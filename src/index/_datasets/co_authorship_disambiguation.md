@@ -29,7 +29,7 @@ maintained_by: Contact maintainer through Dataverse
 open_access: 'TRUE'
 record_creation_timestamp: 5/14/2022 14:41:04
 related_publications: https://doi.org/10.1016/j.respol.2014.01.012
-shortname: co_authorship_disambiguation
+slug: co_authorship_disambiguation
 tags:
 - coauthor network
 - disambiguation

@@ -21,7 +21,7 @@ doi: https://doi.org/10.21203/rs.3.rs-3022970/v1
 last_edit: Mon, 19 Jun 2023 16:48:19 GMT
 maintained_by: lfalciola@scibilis.be
 open_access: 'TRUE'
-shortname: patent_disclosure_conflicts
+slug: patent_disclosure_conflicts
 tags:
 - Conflict of interest
 - Non-patent Literature

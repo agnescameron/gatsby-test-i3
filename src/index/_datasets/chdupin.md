@@ -15,7 +15,7 @@ record_creation_timestamp: 08/16/2021, 14:36:05
 related_projects:
   similar:
   - chembl
-shortname: uses_of_petroleum
+slug: uses_of_petroleum
 tags:
 - petroleum
 - oil consumption

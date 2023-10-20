@@ -24,7 +24,7 @@ last_edit: Mon, 19 Jun 2023 16:38:28 GMT
 location: https://doi.org/10.5281/zenodo.3594642
 maintained_by: Lia Sheer
 open_access: 'TRUE'
-shortname: discern
+slug: discern
 tags:
 - Compustat
 - Patents

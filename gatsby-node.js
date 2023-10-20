@@ -15,7 +15,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       tags: [String]
       schema_fields: [String]
-      slug: String!
+      slug: String
       location: String
       code: String
       documentation: String
@@ -30,29 +30,35 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data, errors } = await graphql(`
   {
-	  pages: allMarkdownRemark {
-	    nodes {
-	    	html
-	    	id
-	      frontmatter {
-	      	slug
-	      }
-	    }
-	}
-}
+  	pages: allMarkdownRemark {
+  	    nodes {
+  	    	html
+  	    	id
+          frontmatter {
+            slug
+          }
+  	    }
+  	}
+  }
   `)
 
   if (errors) {
-    console.log(errors)
+    console.log("gets here, errors are", errors)
   }
   data.pages.nodes.forEach((page, index) => {
-    createPage({
-      path: page.frontmatter.slug,
-      component: require.resolve(`./src/templates/post.js`),
-      context: {
-      	id: page.id
-    	}
-    })
+    console.log('page frontmatter is', page.frontmatter)
+    try {
+      createPage({
+        path: page.frontmatter.slug,
+        component: require.resolve(`./src/templates/post.js`),
+        context: {
+        	id: page.id
+      	}
+      })
+    }
+    catch (e) {
+      console.log(e)
+    }
   })
 }
 
@@ -112,7 +118,7 @@ exports.createResolvers =  async ({ cache, createResolvers }) => {
           const type = info.schema.getType(`MarkdownRemark`)
           return createFieldIndex(dataNodes, type, cache, 'IndexFields')
         },
-      },        
+      },
     },
   })
 }
@@ -129,25 +135,22 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
   const store = {}
   // Iterate over all posts 
   for (const node of dataNodes.entries) {
-    const {slug} = node.fields
+    let {slug} = node.fields
     const title = node.frontmatter.title
-    // const description = node.frontmatter.description
-    const tags = Array.isArray(node.frontmatter.tags) ? node.frontmatter.tags.map(tag => tag !== undefined && tag.toLowerCase()) : node.frontmatter.tags
-    const contributors = Array.isArray(node.frontmatter.contributors) ? node.frontmatter.contributors.map(contributor => contributor !== undefined && contributor) : node.frontmatter.contributors
-    // console.log('contributors', node.frontmatter.contributors, contributors, tags)
-    // console.log('frontmatter is', node.frontmatter)
+    const tags = Array.isArray(node.frontmatter.tags) ? node.frontmatter.tags.map(tag => tag !== undefined && tag.toLowerCase()) : [node.frontmatter.tags]
+    const contributors = Array.isArray(node.frontmatter.contributors) ? node.frontmatter.contributors.map(contributor => contributor !== undefined && contributor) : [node.frontmatter.contributors]
     let html = await Promise.all([
       type.getFields().html.resolve(node),
     ])
     html = html[0]
 
     documents.push({
-      slug: node.fields.slug,
-      title: node.frontmatter.title,
-      contributors: contributors,
+      slug: slug,
+      title: title,
       description: node.frontmatter.description,
       location: node.frontmatter.location,
       tags: tags,
+      contributors: contributors,
       code: node.frontmatter.code,
       documentation: node.frontmatter.documentation,
       content: striptags(html),

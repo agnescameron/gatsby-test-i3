@@ -12,7 +12,7 @@ location: https://www.epo.org/searching-for-patents/business/patstat.html#tab3
 maintained_by: European Patent Office
 open_access: 'FALSE'
 record_creation_timestamp: 11/27/2020 17:20:46
-shortname: patstat
+slug: patstat
 tags:
 - Europe
 - patents

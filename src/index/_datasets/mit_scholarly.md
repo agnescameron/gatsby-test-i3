@@ -12,7 +12,7 @@ record_creation_timestamp: 11/17/2020 17:20:46
 related_project_shortnames: lens
 relationships:
 - lens
-shortname: mit_scholarly
+slug: mit_scholarly
 tags:
 - scholarly literature
 terms_of_use: Cambia grants you a non-exclusive, non-transferable, revocable, limited

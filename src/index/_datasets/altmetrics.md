@@ -6,7 +6,7 @@ description: Tracks a combination of public policy documents, wikipedia, open sy
 last_edit: Mon, 19 Jun 2023 16:48:16 GMT
 location: https://www.altmetric.com/
 open_access: 'FALSE'
-shortname: altmetrics
+slug: altmetrics
 tags:
 - research metrics
 title: AltMetrics

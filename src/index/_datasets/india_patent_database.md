@@ -13,7 +13,7 @@ maintained_by: Intellectual Property India
 open_access: 'FALSE'
 record_creation_timestamp: 08/31/2021, 08:28:19
 references: null
-shortname: india_patent_database
+slug: india_patent_database
 tags:
 - India
 - patents

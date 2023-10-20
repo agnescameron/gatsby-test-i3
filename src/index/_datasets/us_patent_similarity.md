@@ -25,7 +25,7 @@ location: https://zenodo.org/record/3552078
 maintained_by: Ryan Whalen
 open_access: 'TRUE'
 record_creation_timestamp: 09/15/2021, 05:50:18
-shortname: us_patent_similarity
+slug: us_patent_similarity
 tags:
 - patents
 - intellectual property

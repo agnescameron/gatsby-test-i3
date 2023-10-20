@@ -20,7 +20,7 @@ maintained_by: Donald Bowen
 open_access: 'TRUE'
 related_publications: Donald E. Bowen, III, Laurent Frésard, Gerard Hoberg (2022)
   Rapidly Evolving Technologies and Startup Exits. Management Science 0(0). https://doi.org/10.1287/mnsc.2022.4362
-shortname: breadth
+slug: breadth
 size: 210MB
 tags:
 - patents

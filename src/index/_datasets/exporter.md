@@ -9,7 +9,7 @@ documentation: https://report.nih.gov/faqs
 last_edit: Mon, 19 Jun 2023 17:03:52 GMT
 location: https://reporter.nih.gov/exporter
 open_access: 'TRUE'
-shortname: exporter
+slug: exporter
 tags:
 - scholarly
 - public funding

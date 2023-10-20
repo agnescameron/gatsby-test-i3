@@ -22,7 +22,7 @@ location: https://academic.microsoft.com/home
 maintained_by: Currently in transition
 open_access: 'TRUE'
 record_creation_timestamp: 11/29/2020 17:20:46
-shortname: mag
+slug: mag
 tags:
 - citation
 - scholarly literature

@@ -9,7 +9,7 @@ last_edit: Mon, 19 Jun 2023 16:42:45 GMT
 location: https://back.nber.org/releases/
 maintained_by: NBER
 open_access: 'TRUE'
-shortname: nber_indicators
+slug: nber_indicators
 tags:
 - metrics
 - economy
