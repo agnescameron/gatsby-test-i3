@@ -3,7 +3,7 @@ import React, { useState, useRef, useContext, useReducer } from "react"
 import { navigate } from "gatsby"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
-import Filter from "./components/Filter"
+import Filter from "./Filter"
 
 
 const formReducer = (state, event) => {
