@@ -5,7 +5,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
 import Filter from "./Filter"
 
-
 const formReducer = (state, event) => {
     return {
      ...state,

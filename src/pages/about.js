@@ -1,9 +1,11 @@
 import { Link } from "gatsby"
 import * as React from 'react'
+import Layout from './components/layout'
 
 const AboutPage = () => {
   return (
-    <main>
+    <Layout>
+    <h1>About</h1>
     <p>This is the web version of the I³ Open Innovation Dataset Index – a collection of innovation datasets, and related tools, platforms and resources used by the broader research community. This site uses a Github and Google Sheets-based infrastructure to version and manage the files. Everything on this site may be edited collectively -- guidelines for doing so are listed below, but feel free to <a href="mailto:agnescam@mit.edu">get in touch</a> with any questions.</p>
 
     <p>This index is part of the <a href="https://iii.pubpub.org/">Information Innovation Initiative</a>, supported by the <a href="https://sloan.org/">Alfred P. Sloan Foundation.</a></p>
@@ -38,7 +40,7 @@ const AboutPage = () => {
     <h3>Use this Dataset</h3>
 
     <p>Up-to-date CSV copies of the datasets and tools are maintained <a href="https://github.com/Innovation-Information-Initiative/Open-Innovation-Dataset-Index/tree/main/index_archive">here</a>, and may be downloaded/used/distributed under the terms of the MIT License.</p>
-    </main>
+    </Layout>
   )
 }
 

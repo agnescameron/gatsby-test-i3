@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from 'react'
+import Layout from './components/layout'
 
 const DatasetPage = () => {
   const {
@@ -21,7 +22,7 @@ const DatasetPage = () => {
   // return nodes.map(node => node.path)
 
   return (
-    <main>
+    <Layout>
         {nodes.map(node => (
           <li key={node.frontmatter.slug}>
             <span>
@@ -30,7 +31,7 @@ const DatasetPage = () => {
             </span>
           </li>
         ))}
-    </main>
+    </Layout>
   )
 }
 
