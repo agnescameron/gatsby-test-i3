@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-
+import Layout from "../pages/components/layout"
 
 const PostTemplate = ({data}) => {
 
@@ -8,10 +8,12 @@ const PostTemplate = ({data}) => {
   console.log('dataset is', data)
 
   return (
+    <Layout>
     <div>
       <h1>{dataset.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{__html: dataset.html}} />
     </div>
+    </Layout>
   )
 
 }

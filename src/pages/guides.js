@@ -14,6 +14,8 @@ const GuidesPage = () => {
             title
             slug
             description
+            thumbnail_url
+            uuid
           }
         }
       }
@@ -24,14 +26,24 @@ const GuidesPage = () => {
 
   return (
     <Layout>
+        <ul className="indexList">
         {nodes.map(node => (
+        <Link to={"/" + node.frontmatter.slug}>
           <li key={node.frontmatter.slug}>
-            <span>
-              < Link to={'/' + node.frontmatter.slug}> { node.frontmatter.title } -> </Link> 
-                <div dangerouslySetInnerHTML={{__html: node.frontmatter.description}} />
-            </span>
+          <div className="itemThumb">
+            { node.frontmatter.thumbnail_url ?
+            <img src={node.frontmatter.thumbnail_url}/> :
+            <img src={"/assets/thumbnails/"+ node.frontmatter.uuid +".png"}/>
+            }
+          </div>
+            <div className="itemCard">
+              <b>{ node.frontmatter.title }</b><br />
+              <span>{ node.frontmatter.description.replace(/^(.{200}[^\s]*).*/, "$1")  }</span>
+            </div>
           </li>
+        </Link>
         ))}
+        </ul>
     </Layout>
   )
 }

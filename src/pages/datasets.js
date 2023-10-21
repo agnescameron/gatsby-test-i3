@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from 'react'
 import Layout from './components/layout'
+import "./index.css"
 
 const DatasetPage = () => {
   const {
@@ -13,6 +14,8 @@ const DatasetPage = () => {
             title
             slug
             description
+            uuid
+            thumbnail_url
           }
         }
       }
@@ -23,14 +26,24 @@ const DatasetPage = () => {
 
   return (
     <Layout>
+    <ul className="indexList">
         {nodes.map(node => (
+        <Link to={"/" + node.frontmatter.slug}>
           <li key={node.frontmatter.slug}>
-            <span>
-              < Link to={"/" + node.frontmatter.slug}> { node.frontmatter.title } -> </Link> 
-                <div dangerouslySetInnerHTML={{__html: node.frontmatter.description}} />
-            </span>
+          <div className="itemThumb">
+            { node.frontmatter.thumbnail_url ?
+            <img src={node.frontmatter.thumbnail_url}/> :
+            <img src={"/assets/thumbnails/"+ node.frontmatter.uuid +".png"}/>
+            }
+          </div>
+            <div className="itemCard">
+              <b>{ node.frontmatter.title }</b><br />
+              <span dangerouslySetInnerHTML={{__html: node.frontmatter.description.substring(0, 250) + "..." }} />
+            </div>
           </li>
+        </Link>
         ))}
+  </ul>
     </Layout>
   )
 }
