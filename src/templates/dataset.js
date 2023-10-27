@@ -130,6 +130,8 @@ const DatasetTemplate = ({data}) => {
 
 export default DatasetTemplate
 
+export const Head = ({data}) => <title>iiindex -> {data.markdownRemark.frontmatter.title}</title>
+
 export const pageQuery = graphql`
   query PostBySlug(
     $id: String!

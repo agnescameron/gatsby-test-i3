@@ -1,7 +1,6 @@
 import { graphql, Link } from "gatsby"
 import * as React from 'react'
 import SearchForm from "./components/search-form";
-import AdvSearch from "./components/adv-search";
 import Layout from "./components/layout"
 import "./index.css"
 
@@ -27,4 +26,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>iiindex</title>
