@@ -221,13 +221,13 @@ select {
 
 footer {
     font-size: small;
-    position: relative;
+    position: fixed;
     bottom: 0px;
     background-color: lightgrey;
     height: 20px;
     margin-top: 70px;
-    max-width: 800px;
-    min-width: 400px;
-    border-top: 1px solid black;
+    width: 100%;
+/*    border-top: 1px solid black;*/
+    box-shadow: 0px 0px 30px 30px lightgray;
     padding: 5px;
 }
