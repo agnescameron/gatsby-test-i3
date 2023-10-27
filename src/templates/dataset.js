@@ -121,10 +121,12 @@ const DatasetTemplate = ({data}) => {
         </div>
 
     <div>
-    <div>
-      <h2>Notes</h2>
-      <p dangerouslySetInnerHTML={{__html: dataset.html}} />
-    </div>
+    { dataset.html.trim() !== '' && 
+      <div>
+        <h2>Notes</h2>
+        <p dangerouslySetInnerHTML={{__html: dataset.html}} />
+      </div>
+    }
     </div>
     </Layout>
   )
