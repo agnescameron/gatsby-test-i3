@@ -64,7 +64,7 @@ const DatasetTemplate = ({data}) => {
                 <b>relationships to other tools:</b> { info.relationship_description }
             </p>}
 
-            {  typeof info.related_projects === 'object' && info.related_projects !== null &&
+            {  typeof info.related_projects === 'object' && info.related_projects !== null && !Object.values(info.related_projects).every(o => o === null) && 
               <p>
                 <b>related projects:</b>
                 <ul>
@@ -121,7 +121,10 @@ const DatasetTemplate = ({data}) => {
         </div>
 
     <div>
-      <div dangerouslySetInnerHTML={{__html: dataset.html}} />
+    <div>
+      <h2>Notes</h2>
+      <p dangerouslySetInnerHTML={{__html: dataset.html}} />
+    </div>
     </div>
     </Layout>
   )
