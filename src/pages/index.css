@@ -89,6 +89,10 @@ a:hover {
 
 .navContainer {
     border-bottom: 1px solid black;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: lightgray;
 }
 
 .indexList {;
