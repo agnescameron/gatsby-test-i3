@@ -1,6 +1,5 @@
 /* src/components/search-form.js */
-import React, { useState, useRef, useContext, useReducer } from "react"
-import { navigate } from "gatsby"
+import React, { useState, useReducer } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
 import Filter from "./filter"
@@ -19,10 +18,8 @@ const AdvSearch = ({ initialQuery = "" }) => {
   // and setQuery will let us change it
   const formTemplate = { index: 'datasets', code: false, documentation: false, permalink: false, free: false};
   const filterTemplate = { field: 'any', fieldString: ''};
-  const [searchString, setSearchString] = React.useState("");
-  const [filters, setFilters] = React.useState([{...filterTemplate}, {...filterTemplate, modifier: 'AND'}]);
-  const [query, setQuery] = useState(initialQuery)
-  const [results, setResults] = React.useState([]);
+  const [filters, setFilters] = useState([{...filterTemplate}, {...filterTemplate, modifier: 'AND'}]);
+  const [results, setResults] = useState([]);
   const [currentForm, setCurrentForm] = useReducer(formReducer, formTemplate);
 
    const fieldMap = {
@@ -58,19 +55,6 @@ const AdvSearch = ({ initialQuery = "" }) => {
   const toolsIndex = Index.load(data.LunrIndexTools.index)
   const tagsIndex = Index.load(data.LunrIndexTags.index)
   const fieldsIndex = Index.load(data.LunrIndexFields.index)
-
-  // console.log('got tools', toolsIndex, 'got tags', tagsIndex)
-  // We need to get reference to the search input element
-  const inputEl = useRef(null)
-
-
-    const fetchResults = async (result, docs) => {
-        return result.map((item) => {
-              var match = docs.find((doc) => item.ref.toString() === doc._id.toString())
-              match.score = item.score
-              return match
-        })
-    }
 
     const handleFormChange = event => {
       if(event.target.value !== '') {
@@ -147,23 +131,10 @@ const AdvSearch = ({ initialQuery = "" }) => {
   }
 
 
-  // When the form is submitted navigate to /search
-  // with a query q paramenter equal to the value within the input search
-  const handleSubmit = e => {
-    e.preventDefault()
-    // `inputEl.current` points to the mounted search input element
-    const q = inputEl.current.value
-    results.length > 0 && console.log(results[0])
-    results.length > 0 && navigate(results[0].slug + '/')
-  }
-
-
   return (
         <div>
-
-          <div className="searchBox">
           <form onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}>
-            <label><h3>query builder:</h3>
+            <h2>query builder:</h2>
             <div>
               <div className="formSection">
                   <label>search index:<br/>
@@ -201,15 +172,13 @@ const AdvSearch = ({ initialQuery = "" }) => {
                   </label>
                   </div>
               </div>
-            </label>
-                </form>
+              </form>
           <form onSubmit={advSearch}>
             <br/>
             <button>run advanced search</button>
           </form>
           <div>
             { results.length > 0 && <div><b>Advanced search results:</b> {results.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}><Link to={result.slug}> {result.title} </Link></li> )}</div>}
-          </div>
           </div>
         </div>
   )

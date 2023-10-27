@@ -136,8 +136,8 @@ a:hover {
 }
 
 .nav {
-    width: 60%;
-    min-width: 400px;
+    max-width: 700px;
+    min-width: 450px;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -190,7 +190,7 @@ a:hover {
     max-width: 350px;
 }
 
-form {
+/*form {
     border: 1px solid black;
     border-radius: 30px;
     padding: 15px;
@@ -199,7 +199,7 @@ form {
 
 form > div {
     margin-bottom: 20px;
-}
+}*/
 
 select {
     width: 100px;
