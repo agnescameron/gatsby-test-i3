@@ -162,7 +162,6 @@ const AdvSearch = ({ initialQuery = "" }) => {
         <div>
 
           <div className="searchBox">
-          <h2>advanced search</h2>
           <form onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}>
             <label><h3>query builder:</h3>
             <div>

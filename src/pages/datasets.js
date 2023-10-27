@@ -2,6 +2,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from 'react'
 import Layout from './components/layout'
 import "./index.css"
+import SearchForm from "./components/search-form";
 
 const DatasetPage = () => {
   const {
@@ -26,6 +27,7 @@ const DatasetPage = () => {
 
   return (
     <Layout>
+    <SearchForm />
     <ul className="indexList">
         {nodes.map(node => (
         <Link to={"/" + node.frontmatter.slug}>
