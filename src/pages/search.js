@@ -12,4 +12,8 @@ const Search = () => {
   )
 }
 
+
+export const Head = () => <title>iiindex -> search</title>
+
+
 export default Search

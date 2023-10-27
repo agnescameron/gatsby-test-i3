@@ -44,4 +44,8 @@ const AboutPage = () => {
   )
 }
 
+
+export const Head = () => <title>iiindex -> about</title>
+
+
 export default AboutPage

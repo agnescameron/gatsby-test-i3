@@ -15,4 +15,8 @@ const NotFoundPage = () => {
   )
 }
 
+
+export const Head = () => <title>iiindex -> 404</title>
+
+
 export default NotFoundPage
