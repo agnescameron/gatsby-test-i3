@@ -26,6 +26,12 @@ const GuidesPage = () => {
 
   return (
     <Layout>
+        <div>
+        <h1>Guides</h1>
+        <p>
+        
+        </p>
+        </div>
         <ul className="indexList">
         {nodes.map(node => (
         <Link to={"/" + node.frontmatter.slug}>

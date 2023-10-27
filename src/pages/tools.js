@@ -26,6 +26,12 @@ const ToolsPage = () => {
 
   return (
     <Layout>
+        <div>
+        <h1>Tools</h1>
+        <p>
+        
+        </p>
+        </div>
         <ul className="indexList">
           {nodes.map(node => (
           <Link to={"/" + node.frontmatter.slug}>

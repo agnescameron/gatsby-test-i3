@@ -3,10 +3,13 @@ import * as React from 'react'
 import Layout from './components/layout'
 import "./index.css"
 import SearchForm from "./components/search-form";
+import { quickSearch } from "./helpers/quicksearch"
+import { Index } from "lunr"
 
 const DatasetPage = () => {
   const {
     pages: { nodes },
+    lunr: lunr
   } = useStaticQuery(graphql`
     {
       pages: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/_datasets/"  }}) {
@@ -20,10 +23,21 @@ const DatasetPage = () => {
           }
         }
       }
-    }
+      lunr: LunrIndex
+      }
   `)
 
-  // return nodes.map(node => node.path)
+  const [results, setResults] = React.useState(nodes);
+  const { store } = lunr
+  // Lunr in action here
+  const index = Index.load(lunr.index)
+
+  const filter = (query, index, store) => {
+    const res = quickSearch(query, index, store)
+    const res_slugs = res.map(o => o.slug.replace('/', ''))
+    const results = nodes.filter(node => res_slugs.includes(node.frontmatter.slug))
+    setResults(results)
+  }
 
   return (
     <Layout>
@@ -36,9 +50,22 @@ const DatasetPage = () => {
           For recommendations of useful starting datasets for different research specialisms, we also host a set of <Link to="/guides">guides</Link> compiled by researchers in the community. If you think one is missing for your area of research, you could also <Link to="https://github.com/Innovation-Information-Initiative/Open-Innovation-Dataset-Index">add or request one</Link>. If you would like to use a more fine-grained search to explore the index, you can use the advanced search tool <Link to="/search">here</Link>.
       </p>
     </div>
-    <SearchForm />
+    <div>
+      <form role="search">
+        <label htmlFor="search-input" style={{ display: "block" }}>
+          <b>Filter:</b>
+        </label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="dataset title"
+          onChange={(event) => filter(event.target.value, index, store)}
+        />
+        <button type="submit">Go</button>
+      </form>
+    </div>
     <ul className="indexList">
-        {nodes.map(node => (
+        {results.map(node => (
         <Link to={"/" + node.frontmatter.slug}>
           <li key={node.frontmatter.slug}>
           <div className="itemThumb">
