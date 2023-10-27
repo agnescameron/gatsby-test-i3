@@ -1,10 +1,13 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import * as React from 'react'
 import Layout from './components/layout'
+import { quickSearch } from "./helpers/quicksearch"
+import { Index } from "lunr"
 
 const ToolsPage = () => {
   const {
     pages: { nodes },
+    lunr: lunr
   } = useStaticQuery(graphql`
     {
       pages: allMarkdownRemark 
@@ -19,21 +22,47 @@ const ToolsPage = () => {
           }
         }
       }
+      lunr: LunrIndexTools
     }
   `)
 
-  // return nodes.map(node => node.path)
+
+  const [results, setResults] = React.useState(nodes);
+  const { store } = lunr
+  // Lunr in action here
+  const index = Index.load(lunr.index)
+
+  const filter = (query, index, store) => {
+    const res = quickSearch(query, index, store)
+    const res_slugs = res.map(o => o.slug.replace('/', ''))
+    const results = nodes.filter(node => res_slugs.includes(node.frontmatter.slug))
+    setResults(results)
+  }
 
   return (
     <Layout>
         <div>
         <h1>Tools</h1>
         <p>
-        
+        para about tools
         </p>
         </div>
+        <div>
+          <form role="search">
+            <label htmlFor="search-input" style={{ display: "block" }}>
+              <b>Filter:</b>
+            </label>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="tool name"
+              onChange={(event) => filter(event.target.value, index, store)}
+            />
+            <button type="submit">Go</button>
+          </form>
+        </div>
         <ul className="indexList">
-          {nodes.map(node => (
+          {results.map(node => (
           <Link to={"/" + node.frontmatter.slug}>
             <li key={node.frontmatter.slug}>
             <div className="itemThumb">
