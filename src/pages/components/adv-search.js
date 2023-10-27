@@ -11,7 +11,6 @@ const formReducer = (state, event) => {
    }
 }
 
-
 const AdvSearch = ({ initialQuery = "" }) => {
   // Create a piece of state, and initialize it to initialQuery
   // query will hold the current value of the state,
@@ -56,33 +55,33 @@ const AdvSearch = ({ initialQuery = "" }) => {
   const tagsIndex = Index.load(data.LunrIndexTags.index)
   const fieldsIndex = Index.load(data.LunrIndexFields.index)
 
-    const handleFormChange = event => {
-      if(event.target.value !== '') {
-        setCurrentForm({
-          name: event.target.name,
-          value: event.target.type === "checkbox" ? event.target.checked : event.target.value
-        });
-      }
+  const handleFormChange = event => {
+    if(event.target.value !== '') {
+      setCurrentForm({
+        name: event.target.name,
+        value: event.target.type === "checkbox" ? event.target.checked : event.target.value
+      });
     }
+  }
 
 
-    const handleFilterChange = (index, event) => {
-      let data = [...filters];
-      data[index][event.target.name] = event.target.value;
-      setFilters(data);
-    }
+  const handleFilterChange = (index, event) => {
+    let data = [...filters];
+    data[index][event.target.name] = event.target.value;
+    setFilters(data);
+  }
 
-    const addFilter = event => {
-      event.preventDefault()
-      setFilters([...filters, {...filterTemplate, modifier: 'AND'}]);
-    }
+  const addFilter = event => {
+    event.preventDefault()
+    setFilters([...filters, {...filterTemplate, modifier: 'AND'}]);
+  }
 
-    const removeFilter = (index, event) => {
-      // event.preventDefault()
-      const reducedFilters = [...filters]
-      reducedFilters.splice(index, 1);
-      setFilters([...reducedFilters]);
-    }
+  const removeFilter = (index, event) => {
+    // event.preventDefault()
+    const reducedFilters = [...filters]
+    reducedFilters.splice(index, 1);
+    setFilters([...reducedFilters]);
+  }
 
   // On input change use the current value of the input field (e.target.value)
   // to update the state's query value
@@ -137,13 +136,13 @@ const AdvSearch = ({ initialQuery = "" }) => {
             <h2>query builder:</h2>
             <div>
               <div className="formSection">
-                  <label>search index:<br/>
+                  <label><b>index to search:</b></label><br/>
                     <label><input type="radio" name="index" value="datasets" defaultChecked="true" onChange={handleFormChange}/>datasets</label><br/>
                     <label><input type="radio" name="index" value="tools" onChange={handleFormChange}/>tools</label><br/>
-                   </label>
               </div>
                <div className="formSection">
                <>
+               <label><b>filters:</b></label><br/>
               { filters.map( (filter, i) => <Filter 
                 key={i}
                 num={i} 
@@ -162,11 +161,15 @@ const AdvSearch = ({ initialQuery = "" }) => {
                   <button type="button" onClick={addFilter}>+</button>
                 <div>
                 </div>
-            { filters.length > 0 && <div><b>current query:</b> 
-              { filters.map( (filter, i) => <li key={i}>{filter.modifier} {fieldMap[filter.field]} contains {filter.fieldString}</li>)}</div>}
-                  </div>
+            { filters.length > 0 && 
+              <div><b>current query:</b>
+              <ul>
+                { filters.map( (filter, i) => <li key={i}>{filter.modifier} {fieldMap[filter.field]} contains {filter.fieldString}</li>)}
+              </ul>
+              </div>}
+              </div>
                 <div className="formSection">
-                  <label>reusability:<br/>
+                  <label><b>reusability:</b><br/>
                     <label><input type="checkbox" name="code" onChange={handleFormChange}/>code available</label><br/>
                     <label><input type="checkbox" name="documentation" onChange={handleFormChange}/>documentation available</label><br/>
                   </label>
