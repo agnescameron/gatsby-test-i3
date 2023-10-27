@@ -20,6 +20,7 @@ a:hover {
 }
 
 .pageContainer {
+    margin-left: 20px;
     max-width: 800px;
     min-width: 400px;
 }
