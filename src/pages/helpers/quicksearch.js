@@ -3,8 +3,10 @@
 export const quickSearch = (query, index, store) => {
   // const q = e.target.value
   let q = query.slice(-1) === " " ? query : query + '*';
+  q = q + "~1"
 
   let res = []
+
   try {
     // Search is a lunr method
     res = index.search(q, {

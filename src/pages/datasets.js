@@ -33,9 +33,14 @@ const DatasetPage = () => {
   const index = Index.load(lunr.index)
 
   const filter = (query, index, store) => {
-    const results = quickSearch(query, index, store)
-    const res_nodes = results.map(res => nodes.find(node => node.frontmatter.slug === res.slug.replace('/', '')))
-    setResults(res_nodes)
+    if(query !== ''){
+      const results = quickSearch(query, index, store)
+      const res_nodes = results.map(res => nodes.find(node => node.frontmatter.slug === res.slug.replace('/', '')))
+      setResults(res_nodes)
+    }
+
+    else setResults(nodes)
+
   }
 
   return (
