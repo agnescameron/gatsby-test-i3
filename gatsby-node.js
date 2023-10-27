@@ -24,7 +24,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs)
 }
 
-
+//does this want to be different for datasets and tools / guides?
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
     try {
       createPage({
         path: page.frontmatter.slug,
-        component: require.resolve(`./src/templates/post.js`),
+        component: require.resolve(`./src/templates/dataset.js`),
         context: {
         	id: page.id
       	}

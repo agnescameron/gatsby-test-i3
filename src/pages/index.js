@@ -2,7 +2,6 @@ import { graphql, Link } from "gatsby"
 import * as React from 'react'
 import SearchForm from "./components/search-form";
 import AdvSearch from "./components/adv-search";
-import Nav from "./components/Nav";
 import Layout from "./components/layout"
 import "./index.css"
 

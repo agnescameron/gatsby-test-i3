@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../pages/components/layout"
 
-const PostTemplate = ({data}) => {
+const DatasetTemplate = ({data}) => {
 
   const dataset = data.markdownRemark
   console.log('dataset is', data)
@@ -18,7 +18,7 @@ const PostTemplate = ({data}) => {
 
 }
 
-export default PostTemplate
+export default DatasetTemplate
 
 export const pageQuery = graphql`
   query PostBySlug(
