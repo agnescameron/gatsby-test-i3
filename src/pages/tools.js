@@ -33,10 +33,9 @@ const ToolsPage = () => {
   const index = Index.load(lunr.index)
 
   const filter = (query, index, store) => {
-    const res = quickSearch(query, index, store)
-    const res_slugs = res.map(o => o.slug.replace('/', ''))
-    const results = nodes.filter(node => res_slugs.includes(node.frontmatter.slug))
-    setResults(results)
+    const results = quickSearch(query, index, store)
+    const res_nodes = results.map(res => nodes.find(node => node.frontmatter.slug === res.slug.replace('/', '')))
+    setResults(res_nodes)
   }
 
   return (
