@@ -25,7 +25,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
       "any": "Any Field", 
       "title": "Title", 
       "description": "Description", 
-      "schema_fields": "Dataset Headers", 
+      "salient_fields": "Dataset Headers", 
       "tags": "Tags", 
       "contributors": "Contributors", 
    }

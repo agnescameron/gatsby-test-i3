@@ -1,4 +1,5 @@
 import React from 'react';
+import './search.css';
 
 const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolStore, fieldStore, handleFilterChange, removeFilter}) => {
     const [searchTags, setSearchTags] = React.useState(false);
@@ -53,7 +54,7 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
   const handleFilterFieldChange = event => {
     handleFilterChange(num, event)
     event.target.value === 'tags' ? setSearchTags(true) : setSearchTags(false);
-    event.target.value === 'schema_fields' ? setSearchFields(true) : setSearchFields(false);
+    event.target.value === 'salient_fields' ? setSearchFields(true) : setSearchFields(false);
   }
 
   // const removeFilter = async event => {
@@ -78,7 +79,7 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
          <option value="any">Any Field</option>
           <option value="title">Title</option>
           <option value="description">Description</option>
-          <option value="schema_fields">Dataset Headers</option>
+          <option value="salient_fields">Dataset Headers</option>
           <option value="tags">Tags</option>
           <option value="contributors">Contributors</option>
         </select>
@@ -87,12 +88,12 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
       <label>contains:
         { searchTags && 
             <span><input id={"searchInput" + num} name="fieldString" type="text" onChange={tagSearch}/>
-            { tagResults && <div id="inputAppend">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.tag} </li> )}</div>}
+            { tagResults && <div id="inputAppend" className="dropdown">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.tag} </li> )}</div>}
             </span>
         }
         { searchFields && 
             <span><input id={"searchInput" + num} name="fieldString" type="text" onChange={fieldSearch}/>
-            { fieldResults && <div id="inputAppend">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.field} </li>)}</div>}
+            { fieldResults && <div id="inputAppend" className="dropdown">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.field} </li>)}</div>}
             </span>
         }
         { ( !searchTags && !searchFields ) && 

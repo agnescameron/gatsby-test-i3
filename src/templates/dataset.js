@@ -150,7 +150,7 @@ export const pageQuery = graphql`
         tags
         contributors
         location
-        schema_fields
+        salient_fields
         relationship_description
         related_projects {
           child

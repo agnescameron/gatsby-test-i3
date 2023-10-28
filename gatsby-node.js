@@ -14,6 +14,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       contributors: [String]
       description: String
       tags: [String]
+      salient_fields: [String]
       schema_fields: [String]
       slug: String
       location: String
@@ -46,7 +47,6 @@ exports.createPages = async ({ graphql, actions }) => {
     console.log("gets here, errors are", errors)
   }
   data.pages.nodes.forEach((page, index) => {
-    console.log('page frontmatter is', page.frontmatter)
     try {
       createPage({
         path: page.frontmatter.slug,
@@ -164,6 +164,7 @@ const createIndex = async (dataNodes, type, cache, cacheKey) => {
     this.field(`title`)
     this.field(`contributors`)
     this.field(`description`)
+    this.field(`salient_fields`)
     this.field(`schema_fields`)
     this.field(`content`)
     this.field(`tags`)
@@ -192,9 +193,8 @@ const createTagIndex = async (dataNodes, type, cache, cacheKey) => {
   dataNodes.entries.forEach(entry => allTags = allTags.concat(entry.frontmatter.tags));
 
   //filter undefined and convert to lower case
-  allTags = allTags.map(tag => tag !== undefined && tag.toLowerCase())
+  allTags = allTags.filter(tag => tag !== undefined).map(tag => tag.toLowerCase())
   const tagJson = [...new Set(allTags)].map((tag, index) => ({tag: tag, _id: index}));
-  console.log('tagjson', tagJson)
 
   const tagIndex = lunr(function() {
     this.ref('_id');
@@ -219,10 +219,9 @@ const createFieldIndex = async (dataNodes, type, cache, cacheKey) => {
   }
   const fieldStore = {}
 
-  allFields = allFields.map(field => field !== undefined && field.toLowerCase())
   dataNodes.entries.forEach(entry => allFields = allFields.concat(entry.frontmatter.salient_fields));
+  allFields = allFields.filter(field => field !== undefined)
   const fieldJson = [...new Set(allFields)].map((field, index) => ({field: field, _id: index}));
-  console.log('all fields is', allFields)
 
   const fieldIndex = lunr(function() {
       this.ref('_id');
