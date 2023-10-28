@@ -158,7 +158,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
                 removeFilter={removeFilter}
                 /> )
                }
-                  <button type="button" onClick={addFilter}>+</button><br/>
+                  <button type="button" id="filterButton" onClick={addFilter}>+</button><br/>
                 <div>
                 </div>
               </div>
@@ -171,8 +171,8 @@ const AdvSearch = ({ initialQuery = "" }) => {
               </form>
           <form id="submitAdvSearch" onSubmit={advSearch}>
               <div>
-                  ↪ find {currentForm.index} where 
-                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span>{filter.modifier} {fieldMap[filter.field]} contains { filter.fieldString } </span>)}...
+                  ↪ find <b>{currentForm.index}</b> where 
+                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span><b>{filter.modifier && filter.modifier.toLowerCase()}</b> <b>{fieldMap[filter.field].toLowerCase()}</b> contains <b>{filter.fieldString}</b> </span>)}...
                   { currentForm['code'] && <span><br/> → includes code</span> }
                   { currentForm['documentation'] && <span><br/> → includes documentation </span> }
               </div>

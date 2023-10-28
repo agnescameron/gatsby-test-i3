@@ -34,11 +34,21 @@
     border-radius: 10px;
     padding: 5px;
     width: 70%;
+    min-width: 550px;
+}
+
+.filter > * {
+  margin: 2px;
+}
+
+#filterButton {
+  margin: 2px;
 }
 
 #submitAdvSearch {
     margin-top: 20px;
     width: 70%;
+    min-width: 550px;
 /*    border: 1px solid black;*/
 }
 

@@ -63,29 +63,25 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
 
 
   return(
-    <div className="Filter">
+    <div className="filter">
     { num !== 0 && 
-      <label>
         <select name="modifier" id="modifier" onChange={event => handleFilterChange(num, event)}>
           <option value="AND">AND</option>
           <option value="OR">OR</option>
           <option value="NOT">NOT</option>
         </select>
-      </label>
     }
 
-      <label>
-        <select name="field" id="field" onChange={handleFilterFieldChange}>
-         <option value="any">Any Field</option>
-          <option value="title">Title</option>
-          <option value="description">Description</option>
-          <option value="salient_fields">Dataset Headers</option>
-          <option value="tags">Tags</option>
-          <option value="contributors">Contributors</option>
-        </select>
-      </label>
+      <select name="field" id="field" onChange={handleFilterFieldChange}>
+       <option value="any">Any Field</option>
+        <option value="title">Title</option>
+        <option value="description">Description</option>
+        <option value="salient_fields">Dataset Headers</option>
+        <option value="tags">Tags</option>
+        <option value="contributors">Contributors</option>
+      </select>
 
-      <label>contains:
+      <span>contains:</span>
         { searchTags && 
             <div className="dropdown"><input id={"searchInput" + num} name="fieldString" type="text" onChange={tagSearch}/>
             { tagResults && <div id="inputAppend" className="dropdownContent">{tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <div key={j} onClick={(result) => setInput(result)}>{result.tag} </div> )}</div>}
@@ -99,7 +95,6 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
         { ( !searchTags && !searchFields ) && 
           <input id="tagSearch" name="fieldString" type="text" onChange={event => handleFilterChange(num, event)}/>
         }
-      </label>
       
       { num !== 0 && <button onClick={event => removeFilter(num, event)}>-</button> }
     </div>
