@@ -75,22 +75,21 @@ const SearchForm = ({ initialQuery = "" }) => {
       <label htmlFor="search-input" style={{ display: "block" }}>
         Search for:
       </label>
-      <input
-        ref={inputEl}
-        id="search-input"
-        type="search"
-        value={query}
-        placeholder="dataset title"
-        onChange={quickSearch}
-      />
-      <button type="submit">Go</button>
-    </form>
-      <div>
-        { results.length > 0 && <div><b>Quick search results:</b> 
-          { results.filter( (item, i) => i < 5 ).map( 
-            (result, j) => <li key={j}> <Link to={result.slug}> {result.title} </Link></li> 
-            )}</div>}
+      <div className="dropdown">
+        <input
+          ref={inputEl}
+          id="search-input"
+          type="search"
+          value={query}
+          placeholder="dataset title"
+          onChange={quickSearch}
+        />
+          { results.length > 0 && <div className="dropdownContent">
+            { results.filter( (item, i) => i < 5 ).map( 
+              (result, j) => <div key={j}> <Link to={result.slug}> {result.title} </Link></div> 
+              )}</div>}
       </div>
+    </form>
       </div>
   )
 }
