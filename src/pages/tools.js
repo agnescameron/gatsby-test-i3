@@ -46,7 +46,10 @@ const ToolsPage = () => {
         <div>
         <h1>Tools</h1>
         <p>
-        para about tools
+          In addition to datasets, the I³ Index collects tools used in innovation data research. 'Tools' are defined quite broadly, and include scripts used for disambiguation, language processing, entity reconciliation and general data management, and general-purpose data processing code and frameworks.
+        </p>
+        <p>
+          We are particularly interested in researchers building and working with tools around the construction of validation datasets. If that's you, please <a href='mailto:agnescam@mit.edu'>write to us</a>.
         </p>
         </div>
         <div>
