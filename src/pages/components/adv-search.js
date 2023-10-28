@@ -3,6 +3,7 @@ import React, { useState, useReducer } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
 import Filter from "./filter"
+import "./search.css"
 
 const formReducer = (state, event) => {
     return {
@@ -55,7 +56,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
   const tagsIndex = Index.load(data.LunrIndexTags.index)
   const fieldsIndex = Index.load(data.LunrIndexFields.index)
 
-  console.log('indexes', tagsIndex, tagStore, fieldsIndex, fieldStore)
+  console.log(currentForm)
 
   const handleFormChange = event => {
     if(event.target.value !== '') {
@@ -113,7 +114,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
 
     const index = currentForm.index === 'datasets' ? mainIndex : toolsIndex
 
-    console.log('search string is', searchString)
+    console.log('search string is', searchString, 'current form is', currentForm)
 
     let res = []
     try {
@@ -136,14 +137,13 @@ const AdvSearch = ({ initialQuery = "" }) => {
         <div>
           <form onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}>
             <div>
+              <h3>index to search</h3>
               <div className="formSection">
-                  <label><b>index to search:</b></label><br/>
                     <label><input type="radio" name="index" value="datasets" defaultChecked="true" onChange={handleFormChange}/>datasets</label><br/>
                     <label><input type="radio" name="index" value="tools" onChange={handleFormChange}/>tools</label><br/>
               </div>
+               <h3>filters</h3>
                <div className="formSection">
-               <>
-               <label><b>filters:</b></label><br/>
               { filters.map( (filter, i) => <Filter 
                 key={i}
                 num={i} 
@@ -158,27 +158,25 @@ const AdvSearch = ({ initialQuery = "" }) => {
                 removeFilter={removeFilter}
                 /> )
                }
-                </>
                   <button type="button" onClick={addFilter}>+</button><br/>
                 <div>
                 </div>
               </div>
+              <h3>reusability</h3>
                 <div className="formSection">
-                  <label><b>reusability:</b><br/>
                     <label><input type="checkbox" name="code" onChange={handleFormChange}/>code available</label><br/>
                     <label><input type="checkbox" name="documentation" onChange={handleFormChange}/>documentation available</label><br/>
-                  </label>
-                  </div>
+                 </div>
               </div>
               </form>
-              <div><b>current query:</b>
-                <p>
-                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span>{filter.modifier} {fieldMap[filter.field]} contains { filter.fieldString } </span>)}
-                </p>
+          <form id="submitAdvSearch" onSubmit={advSearch}>
+              <div>
+                  ↪ find {currentForm.index} where 
+                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span>{filter.modifier} {fieldMap[filter.field]} contains { filter.fieldString } </span>)}...
+                  { currentForm['code'] && <span><br/> → includes code</span> }
+                  { currentForm['documentation'] && <span><br/> → includes documentation </span> }
               </div>
-          <form onSubmit={advSearch}>
-            <br/>
-            <button>run advanced search</button>
+            <button>run search</button>
           </form>
           <div>
             { results.length > 0 && <div><b>Advanced search results:</b> {results.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}><Link to={result.slug}> {result.title} </Link></li> )}</div>}

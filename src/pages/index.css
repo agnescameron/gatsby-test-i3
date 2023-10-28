@@ -207,13 +207,6 @@ form > div {
     margin-bottom: 20px;
 }*/
 
-.formSection {
-    margin-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 15px;
-    width: 90%;
-}
 
 select {
     width: 100px;

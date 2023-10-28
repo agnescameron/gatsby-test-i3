@@ -16,3 +16,37 @@
 .dropdown:hover .dropdownContent {
   display: block;
 }
+
+.dropdownContent div {
+  padding: 2px;
+}
+
+.dropdownContent div:hover {
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.formSection {
+/*    margin-bottom: 20px;*/
+    margin-top: -10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 70%;
+}
+
+#submitAdvSearch {
+    margin-top: 20px;
+    width: 70%;
+/*    border: 1px solid black;*/
+}
+
+#submitAdvSearch div {
+  width: 80%;
+  height: 30px;
+}
+
+#submitAdvSearch button {
+  float: right;
+}

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react"
 import { navigate } from "gatsby"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Index } from "lunr"
+import "./search.css"
 
 const SearchForm = ({ initialQuery = "" }) => {
   // Create a piece of state, and initialize it to initialQuery
