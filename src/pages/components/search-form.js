@@ -32,8 +32,7 @@ const SearchForm = ({ initialQuery = "" }) => {
   // On input change use the current value of the input field (e.target.value)
   // to update the state's query value
   const quickSearch = event => {
-    // const q = e.target.value
-    let q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
+    const q = event.target.value.slice(-1) === " " ? event.target.value : event.target.value + '*';
     setQuery(event.target.value)
     let res = []
     try {
@@ -64,8 +63,6 @@ const SearchForm = ({ initialQuery = "" }) => {
   // with a query q paramenter equal to the value within the input search
   const handleSubmit = e => {
     e.preventDefault()
-    // `inputEl.current` points to the mounted search input element
-    const q = inputEl.current.value
     results.length > 0 && console.log(results[0])
     results.length > 0 && navigate(results[0].slug + '/')
   }
