@@ -42,6 +42,7 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
           ...fieldStore[ref],
         }
       })
+      console.log('res is', res)
       setFieldResults(res)
       handleFilterChange(num, event)
     } catch (error) {

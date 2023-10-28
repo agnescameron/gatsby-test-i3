@@ -55,6 +55,8 @@ const AdvSearch = ({ initialQuery = "" }) => {
   const tagsIndex = Index.load(data.LunrIndexTags.index)
   const fieldsIndex = Index.load(data.LunrIndexFields.index)
 
+  console.log('indexes', tagsIndex, tagStore, fieldsIndex, fieldStore)
+
   const handleFormChange = event => {
     if(event.target.value !== '') {
       setCurrentForm({
@@ -133,7 +135,6 @@ const AdvSearch = ({ initialQuery = "" }) => {
   return (
         <div>
           <form onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}>
-            <h2>query builder:</h2>
             <div>
               <div className="formSection">
                   <label><b>index to search:</b></label><br/>
@@ -158,15 +159,9 @@ const AdvSearch = ({ initialQuery = "" }) => {
                 /> )
                }
                 </>
-                  <button type="button" onClick={addFilter}>+</button>
+                  <button type="button" onClick={addFilter}>+</button><br/>
                 <div>
                 </div>
-            { filters.length > 0 && 
-              <div><b>current query:</b>
-              <ul>
-                { filters.map( (filter, i) => <li key={i}>{filter.modifier} {fieldMap[filter.field]} contains {filter.fieldString}</li>)}
-              </ul>
-              </div>}
               </div>
                 <div className="formSection">
                   <label><b>reusability:</b><br/>
@@ -176,6 +171,11 @@ const AdvSearch = ({ initialQuery = "" }) => {
                   </div>
               </div>
               </form>
+              <div><b>current query:</b>
+                <p>
+                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span>{filter.modifier} {fieldMap[filter.field]} contains { filter.fieldString } </span>)}
+                </p>
+              </div>
           <form onSubmit={advSearch}>
             <br/>
             <button>run advanced search</button>

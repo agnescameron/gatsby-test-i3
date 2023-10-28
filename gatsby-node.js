@@ -219,14 +219,14 @@ const createFieldIndex = async (dataNodes, type, cache, cacheKey) => {
   }
   const fieldStore = {}
 
-
   allFields = allFields.map(field => field !== undefined && field.toLowerCase())
   dataNodes.entries.forEach(entry => allFields = allFields.concat(entry.frontmatter.salient_fields));
-    const fieldJson = [...new Set(allFields)].map((field, index) => ({field: field, _id: index}));
+  const fieldJson = [...new Set(allFields)].map((field, index) => ({field: field, _id: index}));
+  console.log('all fields is', allFields)
 
-    const fieldIndex = lunr(function() {
-      this.field('field');
+  const fieldIndex = lunr(function() {
       this.ref('_id');
+      this.field('field');
       fieldJson.forEach( entry => {
         this.add(entry);
         const field = entry.field
