@@ -87,14 +87,14 @@ const Filter = ({num, index, tagsIndex, fieldsIndex, toolsIndex, tagStore, toolS
 
       <label>contains:
         { searchTags && 
-            <span><input id={"searchInput" + num} name="fieldString" type="text" onChange={tagSearch}/>
-            { tagResults && <div id="inputAppend" className="dropdown">possible tags: {tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.tag} </li> )}</div>}
-            </span>
+            <div className="dropdown"><input id={"searchInput" + num} name="fieldString" type="text" onChange={tagSearch}/>
+            { tagResults && <div id="inputAppend" className="dropdownContent">{tagResults.filter( (item, i) => i < 5 ).map( (result, j) => <div key={j} onClick={(result) => setInput(result)}>{result.tag} </div> )}</div>}
+            </div>
         }
         { searchFields && 
-            <span><input id={"searchInput" + num} name="fieldString" type="text" onChange={fieldSearch}/>
-            { fieldResults && <div id="inputAppend" className="dropdown">possible fields: {fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j} onClick={(result) => setInput(result)}>{result.field} </li>)}</div>}
-            </span>
+            <div className="dropdown"><input id={"searchInput" + num} name="fieldString" type="text" onChange={fieldSearch}/>
+            { fieldResults && <div id="inputAppend" className="dropdownContent">{fieldResults.filter( (item, i) => i < 5 ).map( (result, j) => <div key={j} onClick={(result) => setInput(result)}>{result.field} </div>)}</div>}
+            </div>
         }
         { ( !searchTags && !searchFields ) && 
           <input id="tagSearch" name="fieldString" type="text" onChange={event => handleFilterChange(num, event)}/>
