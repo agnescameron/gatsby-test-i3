@@ -28,17 +28,17 @@ const DatasetTemplate = ({data}) => {
 
   return (
     <Layout>
-        <div class="pageTitle"> 
+        <div className="pageTitle"> 
           <div>
             { info.thumbnail_url ?
-              <img class="pageThumb" src={ info.thumbnail_url }/> :
-              <img class="pageThumb" src={"/assets/thumbnails/" + info.uuid + ".png"}/>
+              <img alt="thumbnail with project logo" className="pageThumb" src={ info.thumbnail_url }/> :
+              <img alt="decorative thumbnail" className="pageThumb" src={"/assets/thumbnails/" + info.uuid + ".png"}/>
             }
           </div>
           <div><h1>{info.title}</h1></div>
         </div>
 
-        <div class="infoBox">
+        <div className="infoBox">
             { info.location && <p>
               <b>location:</b> <a href={info.location}>{ info.location }</a>
             </p>}
@@ -65,22 +65,22 @@ const DatasetTemplate = ({data}) => {
             </p>}
 
             {  typeof info.related_projects === 'object' && info.related_projects !== null && !Object.values(info.related_projects).every(o => o === null) && 
-              <p>
+              <div>
                 <b>related projects:</b>
                 <ul>
                   { relationship_types.map( rtype => 
                     info.related_projects[rtype] &&
-                    <>
+                    < div key={rtype} >
                     <b>{ rtype }:</b>
                       <ul>
                           { info.related_projects[rtype].map( project => 
-                            <li><a href={"/" + project }>{ project }</a></li>
+                            <li key={project} ><a href={"/" + project }>{ project }</a></li>
                           )}
                       </ul> 
-                    </>
+                    </div >
                     )}
                 </ul>
-              </p>
+              </div>
             }
 
             <b>add relationship:</b> <span id='toggleAddRship' onClick={toggle_add_rship}>+</span>
@@ -108,14 +108,14 @@ const DatasetTemplate = ({data}) => {
             <>
             { Object.keys(info).map( field =>
                 display_fields.includes(field) && typeof info[field] === 'string' && info[field].trim() !== '' && validURL(info[field]) &&  
-                  <p id={ field } data-value={ info[field] } ><b>{ field.replace("_", " ") }:</b> <a href={ info[field] }>{ info[field] }</a> </p>
+                  <p key={field} id={ field } data-value={ info[field] } ><b>{ field.replace("_", " ") }:</b> <a href={ info[field] }>{ info[field] }</a> </p>
             )}
             </>
 
             <>
             { Object.keys(info).map( field => 
                 display_fields.includes(field) && typeof info[field] === 'string' && info[field].trim() !== '' && !validURL(info[field]) &&  
-                  <p id={ field } data-value={ info[field] } ><b>{ field.replace("_", " ") }:</b> { info[field] } </p>
+                  <p key={field} id={ field } data-value={ info[field] } ><b>{ field.replace("_", " ") }:</b> { info[field] } </p>
             )}
             </>
         </div>

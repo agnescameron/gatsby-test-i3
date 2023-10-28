@@ -5,13 +5,13 @@ const Nav = () => {
 	return(
 		<>
 		<header>
-			<div class="headerContainer">
+			<div className="headerContainer">
 				<a href="/"><img src="/assets/open_inno_index.png" /></a>
 			</div>
 		</header>
 
-		<div class="navContainer">
-			<div class="nav">
+		<div className="navContainer">
+			<div className="nav">
 				<a href="/">home</a>
 				<a href="/about">about</a>
 				<Link to="/search/">search</Link>
