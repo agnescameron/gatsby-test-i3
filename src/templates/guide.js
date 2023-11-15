@@ -63,7 +63,7 @@ export const pageQuery = graphql`
         uuid
         slug
         tags
-        authors
+        contributors
       }
     }
   }

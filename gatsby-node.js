@@ -12,6 +12,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter {
       title: String!
       contributors: [String]
+      authors: [String]
       description: String
       tags: [String]
       salient_fields: [String]
