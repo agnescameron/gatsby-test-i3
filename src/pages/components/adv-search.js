@@ -31,30 +31,49 @@ const AdvSearch = ({ initialQuery = "" }) => {
       "contributors": "Contributors", 
    }
 
-  const data = useStaticQuery( graphql`
-    query {
-      site {
+    const {
+    pages: { nodes },
+    site: site,
+    store: store,
+    tagStore: tagStore,
+    toolStore: toolStore,
+    fieldStore: fieldStore
+  } = useStaticQuery( graphql`
+    {
+      pages: allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            slug
+            description
+            uuid
+            thumbnail_url
+          }
+        }
+      }
+
+      site: site {
         siteMetadata {
           title
         }
       }
-      LunrIndex
-      LunrIndexTools
-      LunrIndexTags
-      LunrIndexFields
+      store: LunrIndex
+      toolStore: LunrIndexTools
+      tagStore: LunrIndexTags
+      fieldStore: LunrIndexFields
     }
 `)
   
   // LunrIndex is available via page query
-  const { store } = data.LunrIndex
-  const { toolStore } = data.LunrIndexTools
-  const { tagStore } = data.LunrIndexTags
-  const { fieldStore } = data.LunrIndexFields
+  // const { store } = data.LunrIndex
+  // const { toolStore } = data.LunrIndexTools
+  // const { tagStore } = data.LunrIndexTags
+  // const { fieldStore } = data.LunrIndexFields
   // Lunr in action here
-  const mainIndex = Index.load(data.LunrIndex.index)
-  const toolsIndex = Index.load(data.LunrIndexTools.index)
-  const tagsIndex = Index.load(data.LunrIndexTags.index)
-  const fieldsIndex = Index.load(data.LunrIndexFields.index)
+  const mainIndex = Index.load(store.index)
+  const toolsIndex = Index.load(toolStore.index)
+  const tagsIndex = Index.load(tagStore.index)
+  const fieldsIndex = Index.load(fieldStore.index)
 
   console.log(currentForm)
 
@@ -116,16 +135,16 @@ const AdvSearch = ({ initialQuery = "" }) => {
 
     console.log('search string is', searchString, 'current form is', currentForm)
 
-    let res = []
+    let res_temp = []
     try {
-      res = index.search(searchString).map(({ ref }) => {
+      res_temp = index.search(searchString).map(({ ref }) => {
         return {
           slug: ref,
           ...store[ref],
         }
       })
-      console.log('got results', results)
-      setResults(res)
+      const res_nodes = res_temp.map(res => nodes.find(node => node.frontmatter.slug === res.slug.replace('/', '')))
+      setResults(res_nodes)
     } catch (error) {
       console.log(error)
     }
@@ -135,7 +154,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
 
   return (
         <div>
-          <form onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}>
+          <form onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }} >
             <div>
               <h3>index to search</h3>
               <div className="formSection">
@@ -179,7 +198,26 @@ const AdvSearch = ({ initialQuery = "" }) => {
             <button>run search</button>
           </form>
           <div>
-            { results.length > 0 && <div><b>Advanced search results:</b> {results.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}><Link to={result.slug}> {result.title} </Link></li> )}</div>}
+            { results.length > 0 && <div className="results"><h2>Advanced search results:</h2>
+            <ul className="indexList"> 
+              { results.filter( (item, i) => i < 5 ).map( (node, j) => 
+              <Link to={"/" + node.frontmatter.slug} key={node.frontmatter.slug}>
+                <li>
+                <div className="itemThumb">
+                  { node.frontmatter.thumbnail_url ?
+                  <img src={node.frontmatter.thumbnail_url}/> :
+                  <img src={"/assets/thumbnails/"+ node.frontmatter.uuid +".png"}/>
+                  }
+                </div>
+                  <div className="itemCard">
+                    <b>{ node.frontmatter.title }</b><br />
+                    <span dangerouslySetInnerHTML={{__html: node.frontmatter.description.substring(0, 250) + "..." }} />
+                  </div>
+                </li>
+              </Link>
+               )}
+               </ul>
+              </div>}
           </div>
         </div>
   )
