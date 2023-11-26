@@ -172,7 +172,7 @@ const AdvSearch = ({ initialQuery = "" }) => {
           <form id="submitAdvSearch" onSubmit={advSearch}>
               <div>
                   ↪ find <b>{currentForm.index}</b> where 
-                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span><b>{filter.modifier && filter.modifier.toLowerCase()}</b> <b>{fieldMap[filter.field].toLowerCase()}</b> contains <b>{filter.fieldString}</b> </span>)}...
+                  { filters.map( (filter, i) =>  ( filter.fieldString !== '' || filter.field !== 'any') && <span key={i}><b>{filter.modifier && filter.modifier.toLowerCase()}</b> <b>{fieldMap[filter.field].toLowerCase()}</b> contains <b>{filter.fieldString}</b> </span>)}...
                   { currentForm['code'] && <span><br/> → includes code</span> }
                   { currentForm['documentation'] && <span><br/> → includes documentation </span> }
               </div>
