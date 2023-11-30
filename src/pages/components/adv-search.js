@@ -6,6 +6,10 @@ import Filter from "./filter"
 import "./search.css"
 
 const formReducer = (state, event) => {
+  const {
+    pages: { nodes },
+    lunr: lunr
+  }
     return {
      ...state,
      [event.name]: event.value
@@ -124,8 +128,8 @@ const AdvSearch = ({ initialQuery = "" }) => {
           ...store[ref],
         }
       })
-      console.log('got results', results)
-      setResults(res)
+      const res_nodes = res.map(result => nodes.find(node => node.frontmatter.frontmatter.slug === result.slug.replace('/', '')))
+      setResults(res_nodes)
     } catch (error) {
       console.log(error)
     }
@@ -178,9 +182,24 @@ const AdvSearch = ({ initialQuery = "" }) => {
               </div>
             <button>run search</button>
           </form>
-          <div>
-            { results.length > 0 && <div><b>Advanced search results:</b> {results.filter( (item, i) => i < 5 ).map( (result, j) => <li key={j}><Link to={result.slug}> {result.title} </Link></li> )}</div>}
-          </div>
+
+          <ul className="indexList">
+              {results.length > 0 && results.map(node => (
+              <Link to={"/" + node.frontmatter.slug}>
+                <li key={node.frontmatter.slug}>
+                <div className="itemThumb">
+                  { node.frontmatter.thumbnail_url ?
+                  <img src={node.frontmatter.thumbnail_url}/> :
+                  <img src={"/assets/thumbnails/"+ node.frontmatter.uuid +".png"}/>
+                  }
+                </div>
+                  <div className="itemCard">
+                    <b>{ node.frontmatter.title }</b><br />
+                  </div>
+                </li>
+              </Link>
+              ))}
+        </ul>
         </div>
   )
 }
